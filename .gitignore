@@ -1,0 +1,17 @@
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.loe
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+!*/abbildungen/*.pdf
+!*/pics/*.pdf
+!*/unterlagen/*.pdf
+__pycache__/
+.claude/
+out/
