@@ -3,7 +3,7 @@ title: "Eigenschaften von Relationen"
 description: "Reflexiv, symmetrisch, antisymmetrisch, transitiv: Was sie bedeuten und wie man sie prüft."
 sidebar:
   order: 6
-  label: "Eigenschaften"
+  label: "Relationseigenschaften"
 ---
 
 *In einem Satz: Man beschreibt eine Relation, indem man prüft, welche von fünf typischen Regeln für sie gelten.*
