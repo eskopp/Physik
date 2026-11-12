@@ -257,16 +257,3 @@ Die Funktion $x \mapsto x^2$ ist als $\mathbb{R} \to \mathbb{R}$ weder injektiv 
 ## Endliche Mengen zählen
 
 Bei endlichen Mengen lässt sich alles abzählen. Für $A = \{1,2,3\}$ und $B = \{a,b\}$ gibt es $2^3 = 8$ Funktionen $A \to B$. Keine davon ist injektiv, denn drei Eingaben passen nicht in zwei Ausgänge ohne Doppelung. Sechs davon sind surjektiv. Die Funktion $1 \mapsto a$, $2 \mapsto a$, $3 \mapsto b$ ist ein Beispiel: Sie trifft $a$ und $b$, benutzt aber $a$ doppelt.
-
-## Relationen und ihre Totalität
-
-Auch für allgemeine Relationen $R \subseteq A \times B$ gibt es passende Wörter:
-
-| Eigenschaft | Bedeutung |
-|---|---|
-| linkstotal | jedes $a \in A$ kommt in mindestens einem Paar vor |
-| rechtseindeutig | jedes $a \in A$ kommt in höchstens einem Paar vor |
-| rechtstotal | jedes $b \in B$ kommt in mindestens einem Paar vor |
-| linkseindeutig | jedes $b \in B$ kommt in höchstens einem Paar vor |
-
-Damit ist eine Funktion eine linkstotale und rechtseindeutige Relation. Sie ist **injektiv**, wenn sie zusätzlich linkseindeutig ist, und **surjektiv**, wenn sie rechtstotal ist. "Surjektiv" bedeutet bei Relationen also, dass jedes Element der Zielmenge mindestens einmal getroffen wird.
