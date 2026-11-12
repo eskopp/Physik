@@ -19,6 +19,7 @@ export default defineConfig({
         { icon: 'github', label: 'GitHub', href: 'https://github.com/eskopp/Physik' },
       ],
       lastUpdated: true,
+      components: { SocialIcons: './src/components/SocialIcons.astro' },
       defaultLocale: 'root',
       locales: { root: { label: 'Deutsch', lang: 'de' } },
       head: [
