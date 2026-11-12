@@ -11,7 +11,7 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      title: 'Physik',
+      title: 'Technische Physik',
       defaultLocale: 'root',
       locales: { root: { label: 'Deutsch', lang: 'de' } },
       head: [
