@@ -2,8 +2,8 @@
 title: "Komplexe Zahlen: Grundlagen"
 description: "Die imaginäre Einheit, die Form a + bi und das Rechnen mit komplexen Zahlen."
 sidebar:
-  order: 9
-  label: "Komplexe Zahlen"
+  order: 1
+  label: "Grundlagen"
 ---
 
 *In einem Satz: Komplexe Zahlen erweitern die reellen Zahlen um eine Zahl $i$, deren Quadrat $-1$ ist, damit jede quadratische Gleichung eine Lösung hat.*
@@ -101,4 +101,4 @@ Die Probe zeigt: $(2 + i)(1 - i) = 2 - 2i + i - i^2 = 3 - i$. Das stimmt.
 Das Vorzeichen bei $i^2$ geht gern verloren. Es gilt $-8i^2 = -8 \cdot (-1) = +8$, nicht $-8$. Rechne bei Produkten immer zuerst alle Terme aus und ersetze erst danach $i^2$ durch $-1$.
 :::
 
-Wie man komplexe Zahlen als Punkte in der Ebene versteht und mit Betrag und Winkel beschreibt, steht im Artikel [Betrag und Polarform](/mathematik/1/komplexe-zahlen-polarform/).
+Wie man komplexe Zahlen als Punkte in der Ebene versteht und mit Betrag und Winkel beschreibt, steht im Artikel [Betrag und Polarform](/mathematik/1/komplexe-zahlen/komplexe-zahlen-polarform/).

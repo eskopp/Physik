@@ -125,4 +125,4 @@ Aus $A \subseteq B$ folgt $\mathcal{P}(A) \subseteq \mathcal{P}(B)$. Das lässt 
 2. Wegen $A \subseteq B$ gilt dann auch $M \subseteq B$, denn jedes Element von $M$ liegt in $A$ und damit in $B$.
 3. Also ist $M \in \mathcal{P}(B)$.
 
-Da $M$ beliebig war, ist $\mathcal{P}(A) \subseteq \mathcal{P}(B)$. Dieses Vorgehen mit dem "beliebigen Element" erklärt der Artikel [Beweise mit Mengen](/mathematik/1/beweise-mit-mengen/) genauer.
+Da $M$ beliebig war, ist $\mathcal{P}(A) \subseteq \mathcal{P}(B)$. Dieses Vorgehen mit dem "beliebigen Element" erklärt der Artikel [Beweise mit Mengen](/mathematik/1/logik-und-mengen/beweise-mit-mengen/) genauer.

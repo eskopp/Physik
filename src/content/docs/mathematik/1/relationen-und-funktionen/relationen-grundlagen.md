@@ -2,8 +2,8 @@
 title: "Relationen: Grundlagen"
 description: "Geordnete Paare, das kartesische Produkt und was eine Relation ist."
 sidebar:
-  order: 5
-  label: "Relationen"
+  order: 1
+  label: "Grundlagen"
 ---
 
 *In einem Satz: Eine Relation legt fest, welche Paare von Dingen zusammengehören.*
@@ -80,4 +80,4 @@ $$
 2^{\,n^2}
 $$
 
-verschiedene Relationen auf $A$. Für $n = 2$ sind das $2^4 = 16$, für $n = 3$ schon $2^9 = 512$. Warum $2^k$ Teilmengen entstehen, steht im Artikel [Potenzmengen](/mathematik/1/potenzmengen/).
+verschiedene Relationen auf $A$. Für $n = 2$ sind das $2^4 = 16$, für $n = 3$ schon $2^9 = 512$. Warum $2^k$ Teilmengen entstehen, steht im Artikel [Potenzmengen](/mathematik/1/logik-und-mengen/potenzmengen/).

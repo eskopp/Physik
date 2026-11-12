@@ -78,4 +78,4 @@ $$
 A \cap (B \cup C) = (A \cap B) \cup (A \cap C) .
 $$
 
-Wie man so eine Gleichung beweist, zeigt der Artikel [Beweise mit Mengen](/mathematik/1/beweise-mit-mengen/).
+Wie man so eine Gleichung beweist, zeigt der Artikel [Beweise mit Mengen](/mathematik/1/logik-und-mengen/beweise-mit-mengen/).

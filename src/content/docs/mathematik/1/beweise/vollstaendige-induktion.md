@@ -2,8 +2,7 @@
 title: "Vollständige Induktion"
 description: "Aussagen für alle natürlichen Zahlen beweisen, mit Induktionsanfang und Induktionsschritt."
 sidebar:
-  order: 12
-  label: "Vollständige Induktion"
+  order: 2
 ---
 
 *In einem Satz: Bei der vollständigen Induktion zeigst du, dass eine Aussage für die erste Zahl gilt und dass sie jedes Mal an die nächste Zahl weitergereicht wird.*
@@ -82,4 +81,4 @@ Also gilt sie auch für $n + 1$.
 Ohne Induktionsanfang beweist der Schritt nichts. Nimm die falsche Aussage $A(n)$: "$n = n + 1$". Der Schritt gelingt, denn aus $n = n + 1$ folgt durch Addition von $1$, dass $n + 1 = n + 2$ gilt. Trotzdem ist die Aussage für kein $n$ wahr, denn der Induktionsanfang $1 = 2$ ist falsch. Die Dominokette fällt nicht, wenn der erste Stein stehen bleibt.
 :::
 
-Wie man das Vorgehen als Beweismethode einordnet, steht im Artikel [Beweismethoden](/mathematik/1/beweismethoden/).
+Wie man das Vorgehen als Beweismethode einordnet, steht im Artikel [Beweismethoden](/mathematik/1/beweise/beweismethoden/).

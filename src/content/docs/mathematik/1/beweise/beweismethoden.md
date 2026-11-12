@@ -2,8 +2,7 @@
 title: "Beweismethoden"
 description: "Direkter Beweis, Gegenbeispiel und Widerspruchsbeweis im Vergleich."
 sidebar:
-  order: 11
-  label: "Beweismethoden"
+  order: 1
 ---
 
 *In einem Satz: Ein Beweis zeigt mit Schritten aus bekannten Aussagen, dass etwas immer stimmt, und es gibt drei Grundwege dorthin.*
@@ -76,4 +75,4 @@ Du tust so, als wäre die Behauptung falsch, und folgst den Konsequenzen. Kommt 
 Verwechsle den Widerspruchsbeweis nicht mit dem Gegenbeispiel. Das Gegenbeispiel zeigt, dass eine Aussage **falsch** ist, indem es einen Fall findet, in dem sie versagt. Der Widerspruchsbeweis zeigt, dass eine Aussage **wahr** ist, indem er ihr Gegenteil unmöglich macht.
 :::
 
-Wie man das Gegenteil einer Aussage richtig bildet, steht im Artikel [Logik und Notation](/mathematik/1/logik-und-notation/) unter Verneinung. Für Aussagen über alle natürlichen Zahlen gibt es eine eigene Methode, die [vollständige Induktion](/mathematik/1/vollstaendige-induktion/).
+Wie man das Gegenteil einer Aussage richtig bildet, steht im Artikel [Logik und Notation](/mathematik/1/logik-und-mengen/logik-und-notation/) unter Verneinung. Für Aussagen über alle natürlichen Zahlen gibt es eine eigene Methode, die [vollständige Induktion](/mathematik/1/beweise/vollstaendige-induktion/).

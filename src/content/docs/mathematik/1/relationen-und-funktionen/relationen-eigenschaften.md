@@ -2,8 +2,8 @@
 title: "Eigenschaften von Relationen"
 description: "Reflexiv, symmetrisch, antisymmetrisch, transitiv: Was sie bedeuten und wie man sie prüft."
 sidebar:
-  order: 6
-  label: "Relationseigenschaften"
+  order: 2
+  label: "Eigenschaften"
 ---
 
 *In einem Satz: Man beschreibt eine Relation, indem man prüft, welche von fünf typischen Regeln für sie gelten.*
@@ -44,7 +44,7 @@ Symmetrisch und antisymmetrisch sind **keine Gegensätze**. Die Gleichheit $a = 
 
 ## Eigenschaften widerlegen
 
-Um eine Eigenschaft nachzuweisen, muss man sie für **alle** Elemente zeigen. Um sie zu **widerlegen**, genügt ein einziges Gegenbeispiel (siehe [Logik und Notation](/mathematik/1/logik-und-notation/), Verneinung von $\forall$).
+Um eine Eigenschaft nachzuweisen, muss man sie für **alle** Elemente zeigen. Um sie zu **widerlegen**, genügt ein einziges Gegenbeispiel (siehe [Logik und Notation](/mathematik/1/logik-und-mengen/logik-und-notation/), Verneinung von $\forall$).
 
 **Beispiel:** Die Relation $R_4 = \{(1,2),(2,1)\}$ auf $\{1,2,3\}$ ist nicht transitiv. Es gilt $1 \,R_4\, 2$ und $2 \,R_4\, 1$. Transitivität würde $1 \,R_4\, 1$ verlangen, aber $(1,1) \notin R_4$. Damit ist ein Gegenbeispiel gefunden.
 

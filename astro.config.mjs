@@ -6,7 +6,21 @@ import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
   site: 'https://physik.erikskopp.de',
-  redirects: { '/start/': '/' },
+  redirects: {
+    '/start/': '/',
+    '/mathematik/1/logik-und-notation/': '/mathematik/1/logik-und-mengen/logik-und-notation/',
+    '/mathematik/1/mengen-und-operationen/': '/mathematik/1/logik-und-mengen/mengen-und-operationen/',
+    '/mathematik/1/potenzmengen/': '/mathematik/1/logik-und-mengen/potenzmengen/',
+    '/mathematik/1/beweise-mit-mengen/': '/mathematik/1/logik-und-mengen/beweise-mit-mengen/',
+    '/mathematik/1/relationen-grundlagen/': '/mathematik/1/relationen-und-funktionen/relationen-grundlagen/',
+    '/mathematik/1/relationen-eigenschaften/': '/mathematik/1/relationen-und-funktionen/relationen-eigenschaften/',
+    '/mathematik/1/aequivalenz-und-ordnungsrelationen/': '/mathematik/1/relationen-und-funktionen/aequivalenz-und-ordnungsrelationen/',
+    '/mathematik/1/injektiv-und-surjektiv/': '/mathematik/1/relationen-und-funktionen/injektiv-und-surjektiv/',
+    '/mathematik/1/komplexe-zahlen-grundlagen/': '/mathematik/1/komplexe-zahlen/komplexe-zahlen-grundlagen/',
+    '/mathematik/1/komplexe-zahlen-polarform/': '/mathematik/1/komplexe-zahlen/komplexe-zahlen-polarform/',
+    '/mathematik/1/beweismethoden/': '/mathematik/1/beweise/beweismethoden/',
+    '/mathematik/1/vollstaendige-induktion/': '/mathematik/1/beweise/vollstaendige-induktion/',
+  },
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
@@ -41,7 +55,16 @@ export default defineConfig({
         {
           label: 'Mathematik für Physiker',
           items: [
-            { label: 'Mathematik 1', collapsed: true, items: [{ autogenerate: { directory: 'mathematik/1' } }] },
+            {
+              label: 'Mathematik 1',
+              collapsed: true,
+              items: [
+                { label: 'Logik und Mengen', collapsed: true, items: [{ autogenerate: { directory: 'mathematik/1/logik-und-mengen' } }] },
+                { label: 'Relationen und Funktionen', collapsed: true, items: [{ autogenerate: { directory: 'mathematik/1/relationen-und-funktionen' } }] },
+                { label: 'Komplexe Zahlen', collapsed: true, items: [{ autogenerate: { directory: 'mathematik/1/komplexe-zahlen' } }] },
+                { label: 'Beweise', collapsed: true, items: [{ autogenerate: { directory: 'mathematik/1/beweise' } }] },
+              ],
+            },
             { label: 'Mathematik 2', collapsed: true, items: [{ autogenerate: { directory: 'mathematik/2' } }] },
             { label: 'Mathematik 3', collapsed: true, items: [{ autogenerate: { directory: 'mathematik/3' } }] },
           ],

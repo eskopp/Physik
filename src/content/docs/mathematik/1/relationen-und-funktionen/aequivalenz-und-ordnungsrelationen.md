@@ -2,8 +2,8 @@
 title: "Äquivalenz- und Ordnungsrelationen"
 description: "Zwei wichtige Sorten von Relationen und woran man sie erkennt."
 sidebar:
-  order: 7
-  label: "Äquivalenz und Ordnung"
+  order: 3
+  label: "Äquivalenz, Ordnung"
 ---
 
 *In einem Satz: Eine Äquivalenzrelation sagt "gleichwertig in einer Hinsicht", eine Ordnungsrelation sagt "kommt davor oder ist gleich".*
@@ -63,4 +63,4 @@ Eine Ordnung legt fest, wer "vor" wem kommt, und jeder ist mit sich selbst "höc
 Die Gleichheit $=$ ist **beides zugleich**: Sie ist reflexiv, symmetrisch, antisymmetrisch und transitiv. Eine Relation, die nicht transitiv ist, wird weder das eine noch das andere. Ein Beispiel ist "ist befreundet mit": Wenn A mit B und B mit C befreundet ist, muss A nicht mit C befreundet sein.
 :::
 
-Die einzelnen Eigenschaften und wie man sie prüft, stehen im Artikel [Eigenschaften von Relationen](/mathematik/1/relationen-eigenschaften/).
+Die einzelnen Eigenschaften und wie man sie prüft, stehen im Artikel [Eigenschaften von Relationen](/mathematik/1/relationen-und-funktionen/relationen-eigenschaften/).

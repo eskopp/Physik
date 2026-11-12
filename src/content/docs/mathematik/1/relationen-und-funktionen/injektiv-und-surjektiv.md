@@ -2,8 +2,8 @@
 title: "Injektivität und Surjektivität"
 description: "Wann eine Zuordnung eindeutig umkehrbar ist und wie sich Funktionen von Relationen unterscheiden."
 sidebar:
-  order: 8
-  label: "Injektiv und surjektiv"
+  order: 4
+  label: "Injektiv, surjektiv"
 ---
 
 *In einem Satz: Eine Funktion ist injektiv, wenn sich nie zwei Eingaben denselben Ausgang teilen, und surjektiv, wenn jeder mögliche Ausgang auch erreicht wird.*

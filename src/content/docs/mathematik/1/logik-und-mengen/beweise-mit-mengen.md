@@ -53,4 +53,4 @@ A \setminus (B \setminus C) = \{1\} \setminus \emptyset = \{1\}, \qquad
 (A \setminus B) \setminus C = \emptyset \setminus \{1\} = \emptyset .
 $$
 
-Die beiden Mengen sind verschieden, die Behauptung ist damit widerlegt. Ein Gegenbeispiel genügt, weil die Behauptung für **alle** Mengen gelten soll. Das ist die Verneinung eines $\forall$-Satzes aus dem Artikel [Logik und Notation](/mathematik/1/logik-und-notation/).
+Die beiden Mengen sind verschieden, die Behauptung ist damit widerlegt. Ein Gegenbeispiel genügt, weil die Behauptung für **alle** Mengen gelten soll. Das ist die Verneinung eines $\forall$-Satzes aus dem Artikel [Logik und Notation](/mathematik/1/logik-und-mengen/logik-und-notation/).
