@@ -1,6 +1,6 @@
 ---
 title: "Eigenschaften von Relationen"
-description: "Reflexiv, irreflexiv, symmetrisch, antisymmetrisch, transitiv: Schreibweise, Beispiel mit Rechenweg und Gegenbeispiel."
+description: "Reflexiv, irreflexiv, symmetrisch, antisymmetrisch, transitiv: Formel, Beweis als Rechenkette und Gegenbeispiel."
 sidebar:
   order: 2
   label: "Eigenschaften"
@@ -10,12 +10,12 @@ sidebar:
 
 ## Schreibweise und Vorgehen
 
-Sei $R$ eine Relation auf einer Menge $A$, also $R \subseteq A \times A$. Statt $(a, b) \in R$ schreibt man auch $a \,R\, b$. Beide Schreibweisen bedeuten dasselbe. In allen Beispielen unten ist $A = \{1, 2, 3\}$.
+Sei $R$ eine Relation auf einer Menge $A$, also $R \subseteq A \times A$. Statt $(a, b) \in R$ schreibt man auch $a \,R\, b$. In allen Beispielen unten ist $A = \mathbb{N} = \{1, 2, 3, \dots\}$, und die Relation ist durch eine **Regel** gegeben, zum Beispiel $a \,R\, b \Leftrightarrow a \leq b$.
 
-Jede der fünf Eigenschaften ist eine Regel, die für **alle** Elemente oder Paare gelten muss. Deshalb gehst du immer so vor:
+Jede der fünf Eigenschaften ist eine Aussage über **alle** Elemente. Deshalb gibt es zwei Wege:
 
-- **Nachweisen:** Du prüfst die Regel für jedes Element oder jedes Paar einzeln, bis du alle durch hast.
-- **Widerlegen:** Du suchst **ein** Gegenbeispiel. Ein einziger Fall, in dem die Regel verletzt ist, genügt.
+- **Nachweisen:** Du nimmst beliebige Elemente $a, b, c$ und formst die Regel Schritt für Schritt um, bis die Behauptung dasteht. Beispiele sind kein Beweis.
+- **Widerlegen:** Du suchst **ein** Gegenbeispiel mit konkreten Zahlen. Ein einziger Fall genügt.
 
 Warum das so ist, steht im Artikel [Logik und Notation](/mathematik/1/logik-und-mengen/logik-und-notation/) bei der Verneinung von $\forall$.
 
@@ -25,25 +25,25 @@ Warum das so ist, steht im Artikel [Logik und Notation](/mathematik/1/logik-und-
 $R$ heißt **reflexiv**, wenn jedes Element zu sich selbst in Relation steht:
 
 $$
-\forall a \in A:\; a \,R\, a \qquad\text{das heißt}\qquad (a, a) \in R \ \text{für jedes } a \in A .
+\forall a \in A:\; a \,R\, a .
 $$
 
-Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists a \in A:\; (a, a) \notin R$.
+Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists a \in A:\; \neg(a \,R\, a)$.
 :::
 
 :::tip[In einfachen Worten]
-Jeder steht in Beziehung zu sich selbst. Bei "ist gleich alt wie" ist das so: Jeder ist so alt wie er selbst.
+Jeder steht in Beziehung zu sich selbst. Bei "hat dieselbe Parität wie" ist das so: Jede Zahl ist gerade oder ungerade wie sie selbst.
 :::
 
-**Beispiel mit Rechenweg.** Sei $R = \{(1,1),\ (2,2),\ (3,3),\ (1,2)\}$. Wir prüfen für jedes Element $a$ das Paar $(a, a)$:
+**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a + b$ ist gerade. Wir setzen $b = a$ ein:
 
-- $a = 1$: $(1,1) \in R$ ✓
-- $a = 2$: $(2,2) \in R$ ✓
-- $a = 3$: $(3,3) \in R$ ✓
+$$
+a \,R\, a \;\Leftrightarrow\; a + a \text{ ist gerade} \;\Leftrightarrow\; 2a \text{ ist gerade} .
+$$
 
-Alle drei Paare liegen in $R$. Also ist $R$ reflexiv. Das zusätzliche Paar $(1,2)$ stört nicht.
+Die letzte Aussage stimmt für jedes $a \in \mathbb{N}$, denn $2a = 2 \cdot a$. Also gilt $a \,R\, a$ für alle $a$, und $R$ ist reflexiv.
 
-**Gegenbeispiel.** Sei $S = \{(1,1),\ (2,2),\ (1,2)\}$. Für $a = 1$ und $a = 2$ passt es, aber für $a = 3$ gilt $(3,3) \notin S$. Damit ist $S$ **nicht** reflexiv.
+**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a < b$. Dann ist $a \,R\, a \Leftrightarrow a < a$, und das ist falsch. Schon für $a = 1$ gilt $1 < 1$ nicht. Also ist $<$ **nicht** reflexiv.
 
 ## Irreflexiv
 
@@ -51,25 +51,25 @@ Alle drei Paare liegen in $R$. Also ist $R$ reflexiv. Das zusätzliche Paar $(1,
 $R$ heißt **irreflexiv**, wenn kein Element zu sich selbst in Relation steht:
 
 $$
-\forall a \in A:\; \neg(a \,R\, a) \qquad\text{das heißt}\qquad (a, a) \notin R \ \text{für jedes } a \in A .
+\forall a \in A:\; \neg(a \,R\, a) .
 $$
 
-Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists a \in A:\; (a, a) \in R$.
+Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists a \in A:\; a \,R\, a$.
 :::
 
 :::tip[In einfachen Worten]
-Niemand steht in Beziehung zu sich selbst. Bei "ist größer als" ist das so: Niemand ist größer als er selbst.
+Niemand steht in Beziehung zu sich selbst. Bei "ist kleiner als" ist das so: Keine Zahl ist kleiner als sie selbst.
 :::
 
-**Beispiel mit Rechenweg.** Sei $R = \{(1,2),\ (2,3)\}$. Wir prüfen für jedes $a$, dass $(a, a)$ **nicht** in $R$ liegt:
+**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a < b$. Wir setzen $b = a$ ein:
 
-- $a = 1$: $(1,1) \notin R$ ✓
-- $a = 2$: $(2,2) \notin R$ ✓
-- $a = 3$: $(3,3) \notin R$ ✓
+$$
+a \,R\, a \;\Leftrightarrow\; a < a .
+$$
 
-Also ist $R$ irreflexiv.
+Die Aussage $a < a$ ist für **jedes** $a$ falsch. Also gilt $\neg(a \,R\, a)$ für alle $a$, und $<$ ist irreflexiv.
 
-**Gegenbeispiel.** Sei $S = \{(1,1),\ (1,2)\}$. Für $a = 1$ gilt $(1,1) \in S$. Das ist ein einziger Verstoß, also ist $S$ **nicht** irreflexiv. Wegen $(2,2) \notin S$ ist $S$ auch nicht reflexiv. Eine Relation kann also **weder reflexiv noch irreflexiv** sein.
+**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a \leq b$. Für $a = 1$ gilt $1 \leq 1$, also $1 \,R\, 1$. Das ist ein einziger Verstoß, also ist $\leq$ **nicht** irreflexiv. Wegen $a \leq a$ ist $\leq$ stattdessen reflexiv. Eine Relation kann auch **weder reflexiv noch irreflexiv** sein, wenn nur manche Elemente zu sich selbst in Relation stehen.
 
 ## Symmetrisch
 
@@ -87,15 +87,21 @@ Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists a, b \in A:\; a
 Wenn $a$ zu $b$ passt, dann passt auch $b$ zu $a$. Bei "sitzt neben" ist das so: Sitzt Anna neben Ben, dann sitzt Ben neben Anna.
 :::
 
-**Beispiel mit Rechenweg.** Sei $R = \{(1,2),\ (2,1),\ (3,3)\}$. Wir nehmen jedes Paar $(a, b)$ aus $R$ und prüfen, ob das umgedrehte Paar $(b, a)$ auch in $R$ liegt:
+**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a + b$ ist gerade. Seien $a, b$ beliebig mit $a \,R\, b$:
 
-- $(1,2)$: Umkehrung $(2,1) \in R$ ✓
-- $(2,1)$: Umkehrung $(1,2) \in R$ ✓
-- $(3,3)$: Umkehrung $(3,3) \in R$ ✓
+$$
+a \,R\, b \;\Leftrightarrow\; a + b \text{ ist gerade} \;\Leftrightarrow\; b + a \text{ ist gerade} \;\Leftrightarrow\; b \,R\, a .
+$$
 
-Alle Paare haben ihre Umkehrung in $R$. Also ist $R$ symmetrisch.
+Der mittlere Schritt ist das Kommutativgesetz $a + b = b + a$. Also folgt aus $a \,R\, b$ immer $b \,R\, a$, und $R$ ist symmetrisch.
 
-**Gegenbeispiel.** Sei $S = \{(1,2),\ (2,1),\ (1,3)\}$. Das Paar $(1,3)$ liegt in $S$, seine Umkehrung $(3,1)$ aber nicht. Damit ist $S$ **nicht** symmetrisch.
+**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a \leq b$. Wir wählen $a = 1$ und $b = 2$:
+
+$$
+1 \leq 2 \ \text{(wahr)}, \qquad 2 \leq 1 \ \text{(falsch)} .
+$$
+
+Es gilt $1 \,R\, 2$, aber nicht $2 \,R\, 1$. Damit ist $\leq$ **nicht** symmetrisch.
 
 ## Antisymmetrisch
 
@@ -110,18 +116,24 @@ Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists a, b \in A:\; a
 :::
 
 :::tip[In einfachen Worten]
-Zwei **verschiedene** Elemente dürfen nie in beide Richtungen zueinander in Relation stehen. Bei "ist kleiner oder gleich" ist das so: Aus $a \leq b$ und $b \leq a$ folgt $a = b$.
+Zwei **verschiedene** Elemente dürfen nie in beide Richtungen zueinander in Relation stehen. Bei "ist kleiner oder gleich" ist das so: Gilt $a$ vor $b$ und $b$ vor $a$, müssen sie dasselbe Element sein.
 :::
 
-**Beispiel mit Rechenweg.** Sei $R = \{(1,1),\ (1,2),\ (2,3)\}$. Wir betrachten jedes Paar $(a, b)$ mit $a \neq b$ und prüfen, ob die Umkehrung $(b, a)$ fehlt:
+**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a \leq b$. Seien $a, b$ beliebig mit $a \,R\, b$ und $b \,R\, a$:
 
-- $(1,2)$: Umkehrung $(2,1) \notin R$ ✓
-- $(2,3)$: Umkehrung $(3,2) \notin R$ ✓
-- $(1,1)$: Hier ist $a = b$, es gibt nichts zu prüfen.
+$$
+a \,R\, b \land b \,R\, a \;\Leftrightarrow\; a \leq b \land b \leq a \;\Rightarrow\; a = b .
+$$
 
-Kein Paar mit verschiedenen Elementen kommt in beide Richtungen vor. Also ist $R$ antisymmetrisch.
+Der letzte Schritt gilt, weil eine Zahl, die weder größer noch kleiner als die andere ist, ihr gleich ist. Also ist $\leq$ antisymmetrisch.
 
-**Gegenbeispiel.** Sei $S = \{(1,2),\ (2,1)\}$. Es gilt $1 \,S\, 2$ und $2 \,S\, 1$, aber $1 \neq 2$. Das ist der gesuchte Verstoß, also ist $S$ **nicht** antisymmetrisch.
+**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a + b$ ist gerade. Wir wählen $a = 1$ und $b = 3$:
+
+$$
+1 + 3 = 4 \text{ ist gerade}, \quad 3 + 1 = 4 \text{ ist gerade}, \quad \text{aber } 1 \neq 3 .
+$$
+
+Es gilt $1 \,R\, 3$ und $3 \,R\, 1$ mit $1 \neq 3$. Damit ist diese Relation **nicht** antisymmetrisch.
 
 ## Transitiv
 
@@ -136,33 +148,45 @@ Widerlegt wird die Eigenschaft durch eine einzige Kette: $\exists a, b, c \in A:
 :::
 
 :::tip[In einfachen Worten]
-Ein Umweg über einen Dritten ist nicht nötig. Bei "ist größer als" ist das so: Ist Anna größer als Ben und Ben größer als Carla, dann ist Anna größer als Carla.
+Ein Umweg über einen Dritten ist nicht nötig. Bei "ist ein Teiler von" ist das so: Teilt $a$ die Zahl $b$ und $b$ die Zahl $c$, dann teilt $a$ auch $c$.
 :::
 
-**Beispiel mit Rechenweg.** Sei $R = \{(1,2),\ (2,3),\ (1,3)\}$. Wir suchen alle Ketten, also zwei Paare $(a, b)$ und $(b, c)$, bei denen das zweite Element des ersten Paars das erste des zweiten Paars ist:
+**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a \mid b$, das heißt, $b = k \cdot a$ für ein $k \in \mathbb{N}$. Seien $a, b, c$ beliebig mit $a \,R\, b$ und $b \,R\, c$. Dann gibt es $k, l \in \mathbb{N}$ mit
 
-- $(1,2)$ und $(2,3)$ bilden eine Kette. Gefordert ist $(1,3)$, und $(1,3) \in R$ ✓
-- Das Paar $(1,3)$ endet in $3$, aber kein Paar beginnt mit $3$. Keine weitere Kette.
-- Das Paar $(2,3)$ endet ebenfalls in $3$. Keine weitere Kette.
+$$
+b = k \cdot a \qquad\text{und}\qquad c = l \cdot b .
+$$
 
-Die einzige Kette ist erfüllt. Also ist $R$ transitiv.
+Wir setzen die erste Gleichung in die zweite ein:
 
-**Gegenbeispiel.** Sei $S = \{(1,2),\ (2,3)\}$. Die Kette $(1,2)$ und $(2,3)$ verlangt $(1,3)$, aber $(1,3) \notin S$. Damit ist $S$ **nicht** transitiv.
+$$
+c = l \cdot b = l \cdot (k \cdot a) = (l \cdot k) \cdot a .
+$$
 
-## Überblick an bekannten Relationen
+Da $l \cdot k \in \mathbb{N}$ ist, folgt $a \mid c$, also $a \,R\, c$. Damit ist $\mid$ transitiv.
 
-Auf $A = \{1, 2, 3\}$ betrachten wir fünf Relationen: $a \leq b$, $a = b$, $a < b$ sowie $R_4 = \{(1,2),(2,1)\}$ und $R_5 = \{(1,2),(2,1),(1,3)\}$. Es gilt:
+**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow |a - b| = 1$ ("sind Nachbarzahlen"). Wir wählen $a = 1$, $b = 2$, $c = 3$:
 
-| Eigenschaft | $\leq$ | $=$ | $<$ | $R_4$ | $R_5$ |
+$$
+|1 - 2| = 1 \ \text{(wahr)}, \qquad |2 - 3| = 1 \ \text{(wahr)}, \qquad |1 - 3| = 2 \neq 1 \ \text{(falsch)} .
+$$
+
+Es gilt $1 \,R\, 2$ und $2 \,R\, 3$, aber nicht $1 \,R\, 3$. Damit ist diese Relation **nicht** transitiv.
+
+## Überblick
+
+Fünf Relationen auf $\mathbb{N}$ und ihre Eigenschaften:
+
+| Eigenschaft | $a \leq b$ | $a < b$ | $a + b$ gerade | $a \mid b$ | $\lvert a - b \rvert = 1$ |
 |---|---|---|---|---|---|
-| reflexiv | ja | ja | nein | nein | nein |
-| irreflexiv | nein | nein | ja | ja | ja |
-| symmetrisch | nein | ja | nein | ja | nein |
-| antisymmetrisch | ja | ja | ja | nein | nein |
-| transitiv | ja | ja | ja | nein | nein |
+| reflexiv | ja | nein | ja | ja | nein |
+| irreflexiv | nein | ja | nein | nein | ja |
+| symmetrisch | nein | nein | ja | nein | ja |
+| antisymmetrisch | ja | ja | nein | ja | nein |
+| transitiv | ja | ja | ja | ja | nein |
 
 :::caution[Stolperstelle]
-Symmetrisch und antisymmetrisch sind **keine Gegensätze**. Die Gleichheit $a = b$ ist beides zugleich. Die Relation $R_5$ ist keins von beiden. Auch bei reflexiv und irreflexiv gilt: Auf einer nichtleeren Menge schließen sie sich gegenseitig aus, aber eine Relation kann **keins von beiden** sein, wenn nur manche Elemente zu sich selbst in Relation stehen.
+Symmetrisch und antisymmetrisch sind **keine Gegensätze**. Die Gleichheit $a = b$ ist beides zugleich. Die Relation $\lvert a - b \rvert = 1$ ist symmetrisch, aber nicht antisymmetrisch, und $a \leq b$ ist antisymmetrisch, aber nicht symmetrisch. Es gibt auch Relationen, die keins von beiden sind. Auch reflexiv und irreflexiv schließen sich nur auf nichtleeren Mengen gegenseitig aus, und eine Relation kann **keins von beiden** sein.
 :::
 
 ## Relationen ergänzen
