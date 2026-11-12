@@ -25,14 +25,61 @@ Eine **Aussage** ist ein Satz, der entweder wahr oder falsch ist. Aus Aussagen $
 Das mathematische "oder" ist nie "entweder oder". Es ist auch wahr, wenn beide Teile stimmen. Die Implikation $A \Rightarrow B$ ist ein Versprechen: "Wenn es regnet, nehme ich einen Schirm mit." Gebrochen ist es nur, wenn es regnet und du keinen Schirm dabei hast. Regnet es nicht, ist das Versprechen nie gebrochen, egal was du tust.
 :::
 
-Die Wahrheitstafel der Implikation zeigt genau das. Sie ist nur dann falsch, wenn $A$ wahr und $B$ falsch ist:
+### Wahrheitstafeln
+
+Eine **Wahrheitstafel** listet auf, was eine Verknüpfung ergibt, wenn man für $A$ und $B$ jede mögliche Kombination von wahr (w) und falsch (f) einsetzt.
+
+**Nicht, $\neg A$.** Dreht den Wahrheitswert um.
+
+| $A$ | $\neg A$ |
+|---|---|
+| w | f |
+| f | w |
+
+**Und, $A \land B$.** Wahr nur dann, wenn beide Teile wahr sind.
+
+| $A$ | $B$ | $A \land B$ |
+|---|---|---|
+| w | w | w |
+| w | f | f |
+| f | w | f |
+| f | f | f |
+
+**Oder, $A \lor B$.** Falsch nur dann, wenn beide Teile falsch sind.
+
+| $A$ | $B$ | $A \lor B$ |
+|---|---|---|
+| w | w | w |
+| w | f | w |
+| f | w | w |
+| f | f | f |
+
+**Wenn-dann, $A \Rightarrow B$.** Falsch nur dann, wenn $A$ wahr und $B$ falsch ist. Das ist der gebrochene Schirm-Versprechen-Fall aus dem Kasten oben.
 
 | $A$ | $B$ | $A \Rightarrow B$ |
 |---|---|---|
-| wahr | wahr | wahr |
-| wahr | falsch | **falsch** |
-| falsch | wahr | wahr |
-| falsch | falsch | wahr |
+| w | w | w |
+| w | f | f |
+| f | w | w |
+| f | f | w |
+
+**Genau dann, wenn, $A \Leftrightarrow B$.** Wahr nur dann, wenn $A$ und $B$ denselben Wahrheitswert haben.
+
+| $A$ | $B$ | $A \Leftrightarrow B$ |
+|---|---|---|
+| w | w | w |
+| w | f | f |
+| f | w | f |
+| f | f | w |
+
+Alle vier Verknüpfungen auf einen Blick:
+
+| $A$ | $B$ | $A \land B$ | $A \lor B$ | $A \Rightarrow B$ | $A \Leftrightarrow B$ |
+|---|---|---|---|---|---|
+| w | w | w | w | w | w |
+| w | f | f | w | f | f |
+| f | w | f | w | w | f |
+| f | f | f | f | w | w |
 
 :::caution[Stolperstelle]
 $A \Rightarrow B$ ist **nicht** dasselbe wie $B \Rightarrow A$. Aus "Wenn es regnet, ist die Straße nass" folgt nicht "Wenn die Straße nass ist, regnet es". Die Straße kann auch von einem Putzwagen nass sein. Gleichwertig zu $A \Rightarrow B$ ist dagegen die **Kontraposition** $\neg B \Rightarrow \neg A$: "Ist die Straße trocken, dann regnet es nicht."
