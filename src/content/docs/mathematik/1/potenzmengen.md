@@ -101,22 +101,11 @@ Dann ist die gesuchte Menge $\mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\mathcal{P
 
 $$
 \begin{aligned}
-\emptyset &= \emptyset \\
-\{a\} &= \{\emptyset\} \\
-\{b\} &= \{\{\emptyset\}\} \\
-\{c\} &= \{\{\{\emptyset\}\}\} \\
-\{d\} &= \{\{\emptyset, \{\emptyset\}\}\} \\
-\{a, b\} &= \{\emptyset, \{\emptyset\}\} \\
-\{a, c\} &= \{\emptyset, \{\{\emptyset\}\}\} \\
-\{a, d\} &= \{\emptyset, \{\emptyset, \{\emptyset\}\}\} \\
-\{b, c\} &= \{\{\emptyset\}, \{\{\emptyset\}\}\} \\
-\{b, d\} &= \{\{\emptyset\}, \{\emptyset, \{\emptyset\}\}\} \\
-\{c, d\} &= \{\{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} \\
-\{a, b, c\} &= \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}\} \\
-\{a, b, d\} &= \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\}\} \\
-\{a, c, d\} &= \{\emptyset, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} \\
-\{b, c, d\} &= \{\{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} \\
-\{a, b, c, d\} &= \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\}
+\mathcal{P}(\{a,b,c,d\}) = \bigl\{\ &\emptyset, \\
+&\{a\},\ \{b\},\ \{c\},\ \{d\}, \\
+&\{a,b\},\ \{a,c\},\ \{a,d\},\ \{b,c\},\ \{b,d\},\ \{c,d\}, \\
+&\{a,b,c\},\ \{a,b,d\},\ \{a,c,d\},\ \{b,c,d\}, \\
+&\{a,b,c,d\}\ \bigr\}
 \end{aligned}
 $$
 
