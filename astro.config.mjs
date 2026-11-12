@@ -6,6 +6,7 @@ import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
   site: 'https://physik.erikskopp.de',
+  redirects: { '/start/': '/' },
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
@@ -22,12 +23,12 @@ export default defineConfig({
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/eskopp/Physik' }],
       plugins: [
         lucode({
-          navLinks: [{ label: 'Dokumentation', link: '/start/' }],
+          navLinks: [{ label: 'Dokumentation', link: '/' }],
         }),
       ],
       customCss: ['katex/dist/katex.min.css'],
       sidebar: [
-        { label: 'Start', items: [{ label: 'Übersicht', slug: 'start' }] },
+        { label: 'Start', items: [{ label: 'Übersicht', slug: 'index' }] },
         { label: 'Allgemeine Elektrotechnik 1', items: [{ autogenerate: { directory: 'allgemeine-elektrotechnik-1' } }] },
         { label: 'Experimentalphysik 1: Mechanik und Thermodynamik', items: [{ autogenerate: { directory: 'experimentalphysik-1' } }] },
         { label: 'Grundlagen der Chemie', items: [{ autogenerate: { directory: 'grundlagen-der-chemie' } }] },
