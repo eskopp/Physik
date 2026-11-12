@@ -1,0 +1,141 @@
+---
+---
+
+<div class="torsion" data-torsion>
+  <div class="torsion-controls">
+    <label>
+      <span>Material (Schubmodul G)</span>
+      <select data-g>
+        <option value="80">Stahl, ca. 80 GPa</option>
+        <option value="45">Kupfer, ca. 45 GPa</option>
+        <option value="26">Aluminium, ca. 26 GPa</option>
+      </select>
+    </label>
+    <label>
+      <span>Stabradius r: <output data-out-r></output></span>
+      <input type="range" data-r min="0.5" max="3" step="0.1" value="1" />
+    </label>
+    <label>
+      <span>Stablänge l: <output data-out-l></output></span>
+      <input type="range" data-l min="0.1" max="1" step="0.05" value="0.5" />
+    </label>
+    <label>
+      <span>Masse der Scheibe m: <output data-out-m></output></span>
+      <input type="range" data-m min="0.1" max="2" step="0.1" value="0.5" />
+    </label>
+    <label>
+      <span>Radius der Scheibe R: <output data-out-rr></output></span>
+      <input type="range" data-rr min="2" max="10" step="0.5" value="5" />
+    </label>
+  </div>
+
+  <div class="torsion-view">
+    <svg viewBox="0 0 120 120" role="img" aria-label="Scheibe, die um ihre Mittelachse hin und her schwingt">
+      <circle cx="60" cy="60" r="50" class="ring" />
+      <g data-disk>
+        <circle cx="60" cy="60" r="44" class="disk" />
+        <line x1="60" y1="60" x2="60" y2="16" class="mark" />
+        <circle cx="60" cy="60" r="3" class="hub" />
+      </g>
+    </svg>
+    <div class="torsion-results">
+      <p>Richtgröße <strong data-d></strong></p>
+      <p>Trägheitsmoment <strong data-j></strong></p>
+      <p>Schwingungsdauer <strong data-t></strong></p>
+      <p>Frequenz <strong data-f></strong></p>
+      <label class="slow"><input type="checkbox" data-slow checked /> Zeitlupe (zehnfach langsamer)</label>
+      <button type="button" data-toggle>Pause</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .torsion {
+    border: 1px solid var(--sl-color-hairline, #ddd);
+    border-radius: 0.9rem;
+    padding: 1.1rem;
+    margin: 1.5rem 0;
+    display: grid;
+    gap: 1.2rem;
+  }
+  .torsion-controls { display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  .torsion label { display: grid; gap: 0.25rem; font-size: 0.9rem; }
+  .torsion input[type='range'] { width: 100%; }
+  .torsion select { padding: 0.35rem; border-radius: 0.4rem; border: 1px solid var(--sl-color-hairline, #ccc); background: transparent; color: inherit; }
+  .torsion-view { display: grid; gap: 1rem; grid-template-columns: minmax(8rem, 11rem) 1fr; align-items: center; }
+  .torsion svg { width: 100%; height: auto; }
+  .ring { fill: none; stroke: currentColor; opacity: 0.25; }
+  .disk { fill: color-mix(in srgb, currentColor 10%, transparent); stroke: currentColor; stroke-width: 2; }
+  .mark { stroke: #0b6bdc; stroke-width: 4; stroke-linecap: round; }
+  .hub { fill: currentColor; }
+  .torsion-results p { margin: 0.15rem 0; }
+  .torsion-results .slow { display: flex; flex-direction: row; align-items: center; gap: 0.5rem; margin-top: 0.7rem; }
+  .torsion button { margin-top: 0.6rem; padding: 0.35rem 0.9rem; border-radius: 0.5rem; border: 1px solid var(--sl-color-hairline, #ccc); background: transparent; color: inherit; cursor: pointer; }
+  @media (max-width: 32rem) { .torsion-view { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  const fmt = (x: number, digits = 3) =>
+    x.toLocaleString('de-DE', { maximumSignificantDigits: digits });
+
+  function init(root: HTMLElement) {
+    const q = <T extends Element>(s: string) => root.querySelector(s) as T;
+    const g = q<HTMLSelectElement>('[data-g]');
+    const r = q<HTMLInputElement>('[data-r]');
+    const l = q<HTMLInputElement>('[data-l]');
+    const m = q<HTMLInputElement>('[data-m]');
+    const rr = q<HTMLInputElement>('[data-rr]');
+    const disk = q<SVGGElement>('[data-disk]');
+    const slow = q<HTMLInputElement>('[data-slow]');
+    const toggle = q<HTMLButtonElement>('[data-toggle]');
+
+    let period = 1;
+    let running = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    toggle.textContent = running ? 'Pause' : 'Start';
+
+    function update() {
+      const G = Number(g.value) * 1e9;
+      const radius = Number(r.value) * 1e-3;
+      const length = Number(l.value);
+      const mass = Number(m.value);
+      const R = Number(rr.value) * 1e-2;
+
+      const D = (Math.PI * G * radius ** 4) / (2 * length);
+      const J = 0.5 * mass * R ** 2;
+      period = 2 * Math.PI * Math.sqrt(J / D);
+
+      q('[data-out-r]').textContent = `${fmt(Number(r.value), 2)} mm`;
+      q('[data-out-l]').textContent = `${fmt(length * 100, 3)} cm`;
+      q('[data-out-m]').textContent = `${fmt(mass, 2)} kg`;
+      q('[data-out-rr]').textContent = `${fmt(Number(rr.value), 2)} cm`;
+      q('[data-d]').textContent = `${fmt(D)} N m`;
+      q('[data-j]').textContent = `${fmt(J * 1e4)} · 10⁻⁴ kg m²`;
+      q('[data-t]').textContent = `${fmt(period)} s`;
+      q('[data-f]').textContent = `${fmt(1 / period)} Hz`;
+    }
+
+    [g, r, l, m, rr].forEach((el) => el.addEventListener('input', update));
+    toggle.addEventListener('click', () => {
+      running = !running;
+      toggle.textContent = running ? 'Pause' : 'Start';
+    });
+
+    const amplitude = 35;
+    let start = performance.now();
+    let offset = 0;
+    function frame(now: number) {
+      if (running) {
+        const speed = slow.checked ? 0.1 : 1;
+        offset += ((now - start) / 1000) * speed;
+      }
+      start = now;
+      const phi = amplitude * Math.cos((2 * Math.PI * offset) / period);
+      disk.setAttribute('transform', `rotate(${phi} 60 60)`);
+      requestAnimationFrame(frame);
+    }
+    update();
+    requestAnimationFrame(frame);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-torsion]').forEach(init);
+</script>
