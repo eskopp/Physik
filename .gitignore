@@ -13,8 +13,12 @@
 !*/pics/*.pdf
 !*/unterlagen/*.pdf
 __pycache__/
-.claude/
+.claude/*
+!.claude/skills/
 out/
 node_modules/
 dist/
 .astro/
+*.claude
+*Claude*
+*.*
