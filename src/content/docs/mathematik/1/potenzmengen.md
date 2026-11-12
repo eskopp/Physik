@@ -88,24 +88,17 @@ $$
 \mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\emptyset))\bigr) = \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} .
 $$
 
-**Schritt 4.** Die Menge aus Schritt 3 hat $4$ Elemente, also gibt es $2^4 = 16$ Teilmengen. Zum Aufschreiben geben wir den vier Elementen Kurznamen:
-
-$$
-a = \emptyset, \quad
-b = \{\emptyset\}, \quad
-c = \{\{\emptyset\}\}, \quad
-d = \{\emptyset, \{\emptyset\}\} .
-$$
-
-Dann ist die gesuchte Menge $\mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))\bigr)$ die Menge aller Teilmengen von $\{a, b, c, d\}$. Wir ordnen sie nach der Zahl ihrer Elemente, das hilft, keine zu vergessen. Es sind $1 + 4 + 6 + 4 + 1 = 16$ Stück:
+**Schritt 4.** Die Menge aus Schritt 3 hat $4$ Elemente, also gibt es $2^4 = 16$ Teilmengen. Ausgeschrieben, nach der Zahl ihrer Elemente geordnet ($1 + 4 + 6 + 4 + 1$):
 
 $$
 \begin{aligned}
-\mathcal{P}(\{a,b,c,d\}) = \bigl\{\ &\emptyset, \\
-&\{a\},\ \{b\},\ \{c\},\ \{d\}, \\
-&\{a,b\},\ \{a,c\},\ \{a,d\},\ \{b,c\},\ \{b,d\},\ \{c,d\}, \\
-&\{a,b,c\},\ \{a,b,d\},\ \{a,c,d\},\ \{b,c,d\}, \\
-&\{a,b,c,d\}\ \bigr\}
+\mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))\bigr) = \bigl\{\ &\emptyset, \\
+&\{\emptyset\},\ \{\{\emptyset\}\},\ \{\{\{\emptyset\}\}\},\ \{\{\emptyset,\,\{\emptyset\}\}\}, \\
+&\{\emptyset,\,\{\emptyset\}\},\ \{\emptyset,\,\{\{\emptyset\}\}\},\ \{\emptyset,\,\{\emptyset,\,\{\emptyset\}\}\}, \\
+&\{\{\emptyset\},\,\{\{\emptyset\}\}\},\ \{\{\emptyset\},\,\{\emptyset,\,\{\emptyset\}\}\},\ \{\{\{\emptyset\}\},\,\{\emptyset,\,\{\emptyset\}\}\}, \\
+&\{\emptyset,\,\{\emptyset\},\,\{\{\emptyset\}\}\},\ \{\emptyset,\,\{\emptyset\},\,\{\emptyset,\,\{\emptyset\}\}\}, \\
+&\{\emptyset,\,\{\{\emptyset\}\},\,\{\emptyset,\,\{\emptyset\}\}\},\ \{\{\emptyset\},\,\{\{\emptyset\}\},\,\{\emptyset,\,\{\emptyset\}\}\}, \\
+&\{\emptyset,\,\{\emptyset\},\,\{\{\emptyset\}\},\,\{\emptyset,\,\{\emptyset\}\}\}\ \bigr\}
 \end{aligned}
 $$
 
