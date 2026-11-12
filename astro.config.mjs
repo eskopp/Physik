@@ -12,6 +12,13 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Technische Physik',
+      logo: { src: './src/assets/logo.svg' },
+      favicon: '/favicon.svg',
+      customCss: ['./src/styles/custom.css'],
+      social: [
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/eskopp/Physik' },
+      ],
+      lastUpdated: true,
       defaultLocale: 'root',
       locales: { root: { label: 'Deutsch', lang: 'de' } },
       head: [
@@ -24,7 +31,7 @@ export default defineConfig({
         },
       ],
       sidebar: [
-        { label: 'Start', items: [{ label: 'Übersicht', slug: 'index' }] },
+        { label: 'Start', items: [{ label: 'Übersicht', slug: 'start' }] },
       ],
     }),
   ],

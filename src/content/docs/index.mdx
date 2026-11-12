@@ -1,11 +1,42 @@
 ---
-title: Physik
-description: Mitschriften und Unterlagen zum Physikstudium.
+title: Technische Physik
+description: Mitschriften, Übungen und Formeln aus dem Studium der Technischen Physik an der TU Ilmenau.
+template: splash
+hero:
+  title: Technische Physik
+  tagline: Mitschriften, Übungen und Formeln aus dem Studium an der TU Ilmenau. Sauber gesetzt, durchsuchbar und überall lesbar.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Loslegen
+      link: /start/
+      icon: right-arrow
+    - text: Auf GitHub ansehen
+      link: https://github.com/eskopp/Physik
+      icon: external
+      variant: minimal
 ---
 
-Mitschriften, Übungen und Unterlagen zum Physikstudium an der TU Ilmenau.
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-Formeln werden mit KaTeX gesetzt, zum Beispiel $E = mc^2$ oder
+<CardGrid>
+  <Card title="Mitschriften" icon="pencil">
+    Vorlesungen nach Modul gegliedert, mit Herleitungen statt nur Ergebnissen.
+  </Card>
+  <Card title="Übungen" icon="open-book">
+    Aufgaben mit ausgearbeiteten Lösungen und dem Gedankengang dahinter.
+  </Card>
+  <Card title="Formeln" icon="seti:json">
+    Kurz nachschlagen: Gleichungen mit Einheiten und typischen Fallstricken.
+  </Card>
+  <Card title="Durchsuchbar" icon="magnifier">
+    Volltextsuche über alle Seiten, im Browser, ohne Konto und ohne Tracking.
+  </Card>
+</CardGrid>
+
+## Formeln im Text
+
+Gleichungen werden mit KaTeX gesetzt, im Fließtext wie $E = mc^2$ oder abgesetzt:
 
 $$
 \oint_{\partial A} \vec{E}\cdot \mathrm{d}\vec{s} = -\frac{\mathrm{d}}{\mathrm{d}t}\int_A \vec{B}\cdot \mathrm{d}\vec{A}
