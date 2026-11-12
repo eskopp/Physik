@@ -34,7 +34,13 @@ export default defineConfig({
           },
         },
       ],
-      sidebar: [{ label: 'Start', items: [{ label: 'Übersicht', slug: 'start' }] }],
+      sidebar: [
+        { label: 'Start', items: [{ label: 'Übersicht', slug: 'start' }] },
+        { label: 'Mechanik', items: [{ autogenerate: { directory: 'mechanik' } }] },
+        { label: 'Thermodynamik', items: [{ autogenerate: { directory: 'thermodynamik' } }] },
+        { label: 'Elektrodynamik', items: [{ autogenerate: { directory: 'elektrodynamik' } }] },
+        { label: 'Messtechnik', items: [{ autogenerate: { directory: 'messtechnik' } }] },
+      ],
     }),
   ],
 });
