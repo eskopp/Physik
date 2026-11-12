@@ -25,15 +25,7 @@ export default defineConfig({
           navLinks: [{ label: 'Dokumentation', link: '/start/' }],
         }),
       ],
-      head: [
-        {
-          tag: 'link',
-          attrs: {
-            rel: 'stylesheet',
-            href: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css',
-          },
-        },
-      ],
+      customCss: ['katex/dist/katex.min.css'],
       sidebar: [
         { label: 'Start', items: [{ label: 'Übersicht', slug: 'start' }] },
         { label: 'Allgemeine Elektrotechnik 1', items: [{ autogenerate: { directory: 'allgemeine-elektrotechnik-1' } }] },
