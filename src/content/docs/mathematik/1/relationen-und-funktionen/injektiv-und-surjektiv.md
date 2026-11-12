@@ -1,6 +1,6 @@
 ---
 title: "Injektivität und Surjektivität"
-description: "Wann eine Funktion jeden Wert höchstens einmal und wann sie jeden Wert mindestens einmal trifft, mit Beweis als Rechenkette."
+description: "Wann eine Funktion jeden Wert höchstens einmal und wann sie jeden Wert mindestens einmal trifft, mit Aufgaben und sauber ausgeschriebenen Lösungen."
 sidebar:
   order: 4
   label: "Injektiv, surjektiv"
@@ -36,35 +36,65 @@ Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists x_1, x_2 \in A:
 Keine Kollision: Zwei verschiedene Eingaben landen nie im selben Ausgang. Wenn du also den Ausgang kennst, weißt du eindeutig, welche Eingabe dahinter steckt.
 :::
 
-**Vorgehen beim Nachweis.** Du nimmst $f(x_1) = f(x_2)$ an und formst um, bis $x_1 = x_2$ dasteht.
+**Vorgehen beim Nachweis.** Du nimmst $f(x_1) = f(x_2)$ an und formst um, bis $x_1 = x_2$ dasteht. Zum Widerlegen gibst du zwei verschiedene Eingaben mit gleichem Ausgang an.
 
-**Beispiel mit Rechenweg.** Sei $f: \mathbb{R} \to \mathbb{R}$ mit $f(x) = 2x - 5$. Seien $x_1, x_2 \in \mathbb{R}$ beliebig mit $f(x_1) = f(x_2)$:
+### Aufgabe: Auf Injektivität prüfen
+
+Sei $f: D \subseteq \mathbb{R} \to \mathbb{R}$. Prüfe auf Injektivität:
+
+- **a)** $f(x) = 3x + 1$ mit $D = \mathbb{R}$
+- **b)** $f(x) = x^2$ mit $D = [0, \infty)$
+- **c)** $f(x) = x^2$ mit $D = \mathbb{R}$
+- **d)** $f(x) = mx + n$ mit $m, n \in \mathbb{R}$ und $D \subseteq \mathbb{R}$
+
+**Lösung a).** Seien $x_1, x_2 \in \mathbb{R}$ beliebig mit $f(x_1) = f(x_2)$:
 
 $$
 \begin{aligned}
-2x_1 - 5 &= 2x_2 - 5 && | + 5 \\
-2x_1 &= 2x_2 && | : 2 \\
+3x_1 + 1 &= 3x_2 + 1 && | - 1 \\
+3x_1 &= 3x_2 && | : 3 \\
 x_1 &= x_2 .
 \end{aligned}
 $$
 
-Aus $f(x_1) = f(x_2)$ folgt also $x_1 = x_2$. Damit ist $f$ injektiv.
+Aus $f(x_1) = f(x_2)$ folgt $x_1 = x_2$. Also ist $f$ **injektiv**.
 
-**Gegenbeispiel.** Sei $g: \mathbb{R} \to \mathbb{R}$ mit $g(x) = x^2$. Wir wählen $x_1 = -2$ und $x_2 = 2$:
-
-$$
-g(-2) = 4 = g(2) \qquad\text{aber}\qquad -2 \neq 2 .
-$$
-
-Zwei verschiedene Eingaben haben denselben Ausgang. Damit ist $g$ **nicht** injektiv.
-
-**Mit anderem Definitionsbereich.** Dieselbe Formel auf $[0, \infty)$, also $h: [0,\infty) \to \mathbb{R}$ mit $h(x) = x^2$, ist injektiv. Aus $x_1^2 = x_2^2$ folgt
+**Lösung b).** Seien $x_1, x_2 \in [0, \infty)$ beliebig mit $f(x_1) = f(x_2)$:
 
 $$
-x_1^2 - x_2^2 = 0 \;\Leftrightarrow\; (x_1 - x_2)(x_1 + x_2) = 0 .
+\begin{aligned}
+x_1^2 &= x_2^2 && | \sqrt{\ } \\
+x_1 &= x_2 .
+\end{aligned}
 $$
 
-Ein Produkt ist null, wenn ein Faktor null ist. Der Fall $x_1 + x_2 = 0$ bedeutet wegen $x_1, x_2 \geq 0$, dass beide $0$ sind, also $x_1 = x_2$. Der Fall $x_1 - x_2 = 0$ ist direkt $x_1 = x_2$. In beiden Fällen gilt $x_1 = x_2$.
+Das Wurzelziehen ist hier erlaubt, weil $x_1, x_2 \geq 0$ sind: Es gilt $\sqrt{x^2} = |x| = x$ für $x \geq 0$. Also ist $f$ auf $[0, \infty)$ **injektiv**.
+
+**Lösung c).** Hier ist die Aussage falsch, wir zeigen es mit einem Gegenbeispiel. Wähle $x_1 = -1$ und $x_2 = 1$:
+
+$$
+f(-1) = (-1)^2 = 1 = 1^2 = f(1) \qquad\text{aber}\qquad -1 \neq 1 .
+$$
+
+Zwei verschiedene Eingaben haben denselben Ausgang. Also ist $f$ auf $\mathbb{R}$ **nicht injektiv**. Beim Wurzelziehen wie in b) ginge ein Vorzeichen verloren, denn $\sqrt{x^2} = |x|$.
+
+**Lösung d).** Hier muss man zwei Fälle trennen.
+
+*Fall $m \neq 0$.* Seien $x_1, x_2$ beliebig mit $f(x_1) = f(x_2)$:
+
+$$
+\begin{aligned}
+m x_1 + n &= m x_2 + n && | - n \\
+m x_1 &= m x_2 && | : m \\
+x_1 &= x_2 .
+\end{aligned}
+$$
+
+Die Division durch $m$ ist erlaubt, weil $m \neq 0$ ist. Also ist $f$ **injektiv**.
+
+*Fall $m = 0$.* Dann ist $f(x) = 0 \cdot x + n = n$ konstant. Zum Beispiel gilt $f(0) = n = f(1)$ mit $0 \neq 1$. Also ist $f$ **nicht injektiv**.
+
+Da $m = 0$ erlaubt ist, ist $f(x) = mx + n$ im Allgemeinen **nicht** injektiv. Sie ist es genau für $m \neq 0$.
 
 ## Surjektiv
 
@@ -84,27 +114,60 @@ Kein Ausgang bleibt leer. Wähle dir irgendeinen Wert $y$ im Zielbereich: Du fin
 
 **Vorgehen beim Nachweis.** Du nimmst ein beliebiges $y$ aus dem Zielbereich, löst die Gleichung $f(x) = y$ nach $x$ auf und prüfst, dass dieses $x$ im Definitionsbereich liegt.
 
-**Beispiel mit Rechenweg.** Sei $f: \mathbb{R} \to \mathbb{R}$ mit $f(x) = 2x - 5$. Sei $y \in \mathbb{R}$ beliebig. Wir suchen $x$ mit $f(x) = y$:
+### Aufgabe: Auf Surjektivität prüfen
+
+Sei $f: A \to B$. Prüfe auf Surjektivität:
+
+- **a)** $f(x) = 3x + 1$ mit $A = B = \mathbb{R}$
+- **b)** $f(x) = mx + n$ mit $A = B = \mathbb{R}$ und $m, n \in \mathbb{R}$
+- **c)** $f(x) = x^2$ mit $A = B = \mathbb{R}$
+- **d)** $f(x) = x^2$ mit $A = \mathbb{R}$ und $B = [0, \infty)$
+
+**Lösung a).** Sei $y \in \mathbb{R}$ beliebig. Wir suchen $x \in \mathbb{R}$ mit $f(x) = y$:
 
 $$
 \begin{aligned}
-2x - 5 &= y && | + 5 \\
-2x &= y + 5 && | : 2 \\
-x &= \frac{y + 5}{2} .
+3x + 1 &= y && | - 1 \\
+3x &= y - 1 && | : 3 \\
+x &= \frac{y - 1}{3} .
 \end{aligned}
 $$
 
-Dieses $x$ ist für jedes $y \in \mathbb{R}$ eine reelle Zahl. Zur Kontrolle: $f\!\left(\frac{y+5}{2}\right) = 2 \cdot \frac{y+5}{2} - 5 = y$. Damit ist $f$ surjektiv.
+Dieses $x$ ist für jedes $y \in \mathbb{R}$ eine reelle Zahl. Zur Kontrolle: $f\!\left(\frac{y-1}{3}\right) = 3 \cdot \frac{y-1}{3} + 1 = y$. Also ist $f$ **surjektiv**.
 
-**Gegenbeispiel.** Sei $g: \mathbb{R} \to \mathbb{R}$ mit $g(x) = x^2$. Wir wählen $y = -1$:
+**Lösung b).** Wieder zwei Fälle.
+
+*Fall $m \neq 0$.* Sei $y \in \mathbb{R}$ beliebig:
 
 $$
-x^2 = -1 .
+\begin{aligned}
+m x + n &= y && | - n \\
+m x &= y - n && | : m \\
+x &= \frac{y - n}{m} .
+\end{aligned}
 $$
 
-Diese Gleichung hat in $\mathbb{R}$ keine Lösung, denn ein Quadrat ist nie negativ. Der Wert $-1$ wird nie getroffen. Damit ist $g$ **nicht** surjektiv.
+Das $x$ existiert für jedes $y$, weil $m \neq 0$ ist. Also ist $f$ **surjektiv**.
 
-**Mit anderem Zielbereich.** Auf $k: \mathbb{R} \to [0, \infty)$ mit $k(x) = x^2$ ist die Funktion surjektiv. Für beliebiges $y \geq 0$ löst $x = \sqrt{y}$ die Gleichung, denn $(\sqrt{y})^2 = y$, und $\sqrt{y}$ ist eine reelle Zahl.
+*Fall $m = 0$.* Dann ist $f(x) = n$ konstant. Es wird nur der Wert $n$ getroffen. Jedes $y \neq n$, zum Beispiel $y = n + 1$, wird nicht getroffen. Also ist $f$ **nicht surjektiv**.
+
+Da $m = 0$ erlaubt ist, ist $f(x) = mx + n$ im Allgemeinen **nicht** surjektiv. Sie ist es genau für $m \neq 0$.
+
+**Lösung c).** Die Aussage ist falsch, wir zeigen es mit einem Gegenbeispiel. Wähle $y = -4 \in B = \mathbb{R}$. Wir suchen $x \in \mathbb{R}$ mit
+
+$$
+x^2 = -4 .
+$$
+
+Diese Gleichung hat in $\mathbb{R}$ keine Lösung, denn ein Quadrat ist nie negativ, und $\sqrt{-4}$ ist keine reelle Zahl. Der Wert $-4$ wird nie getroffen. Also ist $f$ **nicht surjektiv**.
+
+**Lösung d).** Sei $y \in [0, \infty)$ beliebig. Wir lösen $x^2 = y$ und wählen
+
+$$
+x = \sqrt{y} .
+$$
+
+Wegen $y \geq 0$ ist $\sqrt{y}$ eine reelle Zahl, liegt also in $A = \mathbb{R}$. Kontrolle: $(\sqrt{y})^2 = y$. Also ist $f$ mit Zielbereich $[0, \infty)$ **surjektiv**. Dieselbe Formel wie in c), aber ein anderer Zielbereich, und deshalb ein anderes Ergebnis.
 
 ## Bijektiv
 
@@ -116,7 +179,62 @@ $f: A \to B$ heißt **bijektiv**, wenn sie injektiv und surjektiv ist. Dann gibt
 Jeder Eingang gehört zu genau einem Ausgang und umgekehrt. Nur dann kann man die Zuordnung eindeutig umkehren.
 :::
 
-**Beispiel.** $f: \mathbb{R} \to \mathbb{R}$ mit $f(x) = 2x - 5$ ist injektiv und surjektiv, also bijektiv. Die Umkehrung steht schon im Rechenweg oben: $f^{-1}(y) = \dfrac{y + 5}{2}$.
+**Vorgehen.** Du zeigst drei Dinge: Die Funktion bildet wirklich von $A$ nach $B$ ab, sie ist injektiv, und sie ist surjektiv. Eine Bijektion $A \to B$ zeigt, dass beide Mengen "gleich viele" Elemente haben, man sagt **gleichmächtig**.
+
+### Aufgabe: Bijektionen angeben
+
+Zeige, dass die Teilmengen von $\mathbb{R}$ gleichmächtig sind, und gib jeweils eine Bijektion $f: A \to B$ an:
+
+- **a)** $A = (0, 1)$ und $B = (a, b)$ mit $a, b \in \mathbb{R}$ und $a < b$
+- **b)** $A = (-\infty, 0]$ und $B = [1, \infty)$
+
+**Lösung a).** Wir wählen die lineare Funktion
+
+$$
+f(x) = (b - a)\,x + a .
+$$
+
+*Sie bildet nach $B$ ab.* Für $0 < x < 1$ gilt $0 < (b-a)\,x < b - a$, denn $b - a > 0$. Addiert man $a$, folgt $a < f(x) < b$, also $f(x) \in (a, b)$.
+
+*Injektiv.* Seien $x_1, x_2 \in (0,1)$ mit $f(x_1) = f(x_2)$:
+
+$$
+\begin{aligned}
+(b-a)\,x_1 + a &= (b-a)\,x_2 + a && | - a \\
+(b-a)\,x_1 &= (b-a)\,x_2 && | : (b-a) \\
+x_1 &= x_2 .
+\end{aligned}
+$$
+
+Die Division ist erlaubt, weil $b - a \neq 0$ ist.
+
+*Surjektiv.* Sei $y \in (a, b)$ beliebig. Wir lösen $f(x) = y$:
+
+$$
+\begin{aligned}
+(b-a)\,x + a &= y && | - a \\
+(b-a)\,x &= y - a && | : (b-a) \\
+x &= \frac{y - a}{b - a} .
+\end{aligned}
+$$
+
+Dieses $x$ liegt in $(0, 1)$: Aus $a < y < b$ folgt $0 < y - a < b - a$, und Division durch $b - a > 0$ ergibt $0 < x < 1$. Damit ist $f$ surjektiv.
+
+Da $f$ injektiv und surjektiv ist, ist $f$ **bijektiv**.
+
+**Lösung b).** Wir wählen
+
+$$
+f(x) = -x + 1 .
+$$
+
+*Sie bildet nach $B$ ab.* Für $x \leq 0$ gilt $-x \geq 0$ und damit $f(x) = -x + 1 \geq 1$, also $f(x) \in [1, \infty)$.
+
+*Injektiv.* Aus $f(x_1) = f(x_2)$ folgt $-x_1 + 1 = -x_2 + 1$, also $-x_1 = -x_2$ und damit $x_1 = x_2$.
+
+*Surjektiv.* Sei $y \in [1, \infty)$ beliebig. Aus $-x + 1 = y$ folgt $x = 1 - y$. Wegen $y \geq 1$ gilt $x = 1 - y \leq 0$, also $x \in (-\infty, 0]$. Kontrolle: $f(1 - y) = -(1 - y) + 1 = y$.
+
+Also ist $f$ **bijektiv**.
 
 :::caution[Stolperstelle]
 Die Funktion $x \mapsto x^2$ ist als $\mathbb{R} \to \mathbb{R}$ weder injektiv noch surjektiv. Als $\mathbb{R} \to [0,\infty)$ ist sie surjektiv, aber nicht injektiv. Als $[0,\infty) \to \mathbb{R}$ ist sie injektiv, aber nicht surjektiv. Erst als $[0,\infty) \to [0,\infty)$ ist sie bijektiv. Gleiche Formel, andere Mengen, andere Eigenschaft.

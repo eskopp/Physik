@@ -1,23 +1,31 @@
 ---
 title: "Eigenschaften von Relationen"
-description: "Reflexiv, irreflexiv, symmetrisch, antisymmetrisch, transitiv: Formel, Beweis als Rechenkette und Gegenbeispiel."
+description: "Reflexiv, symmetrisch, antisymmetrisch, transitiv: Formel, Beispiel aus der Hausaufgabe als Rechenkette und Gegenbeispiel."
 sidebar:
   order: 2
   label: "Eigenschaften"
 ---
 
-*In einem Satz: Man beschreibt eine Relation, indem man prüft, welche von fünf typischen Regeln für sie gelten.*
+*In einem Satz: Man beschreibt eine Relation, indem man prüft, welche von vier typischen Regeln für sie gelten.*
 
 ## Schreibweise und Vorgehen
 
-Sei $R$ eine Relation auf einer Menge $A$, also $R \subseteq A \times A$. Statt $(a, b) \in R$ schreibt man auch $a \,R\, b$. In allen Beispielen unten ist $A = \mathbb{N} = \{1, 2, 3, \dots\}$, und die Relation ist durch eine **Regel** gegeben, zum Beispiel $a \,R\, b \Leftrightarrow a \leq b$.
+Sei $R$ eine Relation auf einer Menge $A$, also $R \subseteq A \times A$. Statt $(a, b) \in R$ schreibt man auch $a \,R\, b$. Mit $\mathbb{N}$ ist hier $\{1, 2, 3, \dots\}$ gemeint.
 
-Jede der fünf Eigenschaften ist eine Aussage über **alle** Elemente. Deshalb gibt es zwei Wege:
+Jede der vier Eigenschaften ist eine Aussage über **alle** Elemente. Deshalb gibt es zwei Wege:
 
-- **Nachweisen:** Du nimmst beliebige Elemente $a, b, c$ und formst die Regel Schritt für Schritt um, bis die Behauptung dasteht. Beispiele sind kein Beweis.
-- **Widerlegen:** Du suchst **ein** Gegenbeispiel mit konkreten Zahlen. Ein einziger Fall genügt.
+- **Nachweisen:** Du nimmst beliebige Elemente und formst die Regel Schritt für Schritt um, bis die Behauptung dasteht. Einzelne Beispiele beweisen nichts.
+- **Widerlegen:** Du suchst **ein** Gegenbeispiel mit konkreten Werten. Ein einziger Fall genügt.
 
 Warum das so ist, steht im Artikel [Logik und Notation](/mathematik/1/logik-und-mengen/logik-und-notation/) bei der Verneinung von $\forall$.
+
+Für zwei Eigenschaften nutzen wir dieselbe Relation auf $\mathbb{N} \times \mathbb{N}$, deren Elemente Paare $(a, b)$ sind:
+
+$$
+(a, b) \,R\, (c, d) \;\Leftrightarrow\; a \cdot d \leq b \cdot c .
+$$
+
+Sie vergleicht Paare nach dem Verhältnis $a/b$ gegen $c/d$. Mit $a/b \leq c/d$ und Multiplikation mit $b \cdot d > 0$ entsteht genau $a \cdot d \leq b \cdot c$.
 
 ## Reflexiv
 
@@ -25,51 +33,27 @@ Warum das so ist, steht im Artikel [Logik und Notation](/mathematik/1/logik-und-
 $R$ heißt **reflexiv**, wenn jedes Element zu sich selbst in Relation steht:
 
 $$
-\forall a \in A:\; a \,R\, a .
+\forall x \in A:\; x \,R\, x .
 $$
 
-Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists a \in A:\; \neg(a \,R\, a)$.
+Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists x \in A:\; \neg(x \,R\, x)$.
 :::
 
 :::tip[In einfachen Worten]
-Jeder steht in Beziehung zu sich selbst. Bei "hat dieselbe Parität wie" ist das so: Jede Zahl ist gerade oder ungerade wie sie selbst.
+Jeder steht in Beziehung zu sich selbst. Bei "ist im selben Fachsemester wie" ist das so: Ich bin im selben Fachsemester wie ich selbst.
 :::
 
-**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a + b$ ist gerade. Wir setzen $b = a$ ein:
+**Aufgabe.** Auf $\mathbb{N} \times \mathbb{N}$ ist durch $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ eine Relation erklärt. Untersuche $R$ auf Reflexivität.
+
+**Lösung.** Sei $(a, b)$ beliebig. Wir setzen $(c, d) = (a, b)$ ein:
 
 $$
-a \,R\, a \;\Leftrightarrow\; a + a \text{ ist gerade} \;\Leftrightarrow\; 2a \text{ ist gerade} .
+(a, b) \,R\, (a, b) \;\Leftrightarrow\; a \cdot b \leq b \cdot a \;\Leftrightarrow\; a \cdot b \leq a \cdot b .
 $$
 
-Die letzte Aussage stimmt für jedes $a \in \mathbb{N}$, denn $2a = 2 \cdot a$. Also gilt $a \,R\, a$ für alle $a$, und $R$ ist reflexiv.
+Der zweite Schritt ist das Kommutativgesetz $b \cdot a = a \cdot b$. Die letzte Aussage ist für alle $a, b \in \mathbb{N}$ wahr. Also gilt $(a, b) \,R\, (a, b)$ für jedes Paar, und $R$ ist reflexiv.
 
-**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a < b$. Dann ist $a \,R\, a \Leftrightarrow a < a$, und das ist falsch. Schon für $a = 1$ gilt $1 < 1$ nicht. Also ist $<$ **nicht** reflexiv.
-
-## Irreflexiv
-
-:::note[Definition]
-$R$ heißt **irreflexiv**, wenn kein Element zu sich selbst in Relation steht:
-
-$$
-\forall a \in A:\; \neg(a \,R\, a) .
-$$
-
-Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists a \in A:\; a \,R\, a$.
-:::
-
-:::tip[In einfachen Worten]
-Niemand steht in Beziehung zu sich selbst. Bei "ist kleiner als" ist das so: Keine Zahl ist kleiner als sie selbst.
-:::
-
-**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a < b$. Wir setzen $b = a$ ein:
-
-$$
-a \,R\, a \;\Leftrightarrow\; a < a .
-$$
-
-Die Aussage $a < a$ ist für **jedes** $a$ falsch. Also gilt $\neg(a \,R\, a)$ für alle $a$, und $<$ ist irreflexiv.
-
-**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a \leq b$. Für $a = 1$ gilt $1 \leq 1$, also $1 \,R\, 1$. Das ist ein einziger Verstoß, also ist $\leq$ **nicht** irreflexiv. Wegen $a \leq a$ ist $\leq$ stattdessen reflexiv. Eine Relation kann auch **weder reflexiv noch irreflexiv** sein, wenn nur manche Elemente zu sich selbst in Relation stehen.
+**Gegenbeispiel.** Sei $x \,R\, y \Leftrightarrow x < y$ auf $\mathbb{N}$. Dann ist $x \,R\, x \Leftrightarrow x < x$, und das ist falsch. Schon für $x = 1$ gilt $1 < 1$ nicht. Also ist "kleiner als" **nicht** reflexiv.
 
 ## Symmetrisch
 
@@ -77,31 +61,39 @@ Die Aussage $a < a$ ist für **jedes** $a$ falsch. Also gilt $\neg(a \,R\, a)$ f
 $R$ heißt **symmetrisch**, wenn die Relation immer in beide Richtungen gilt:
 
 $$
-\forall a, b \in A:\; a \,R\, b \Rightarrow b \,R\, a .
+\forall x, y \in A:\; x \,R\, y \Rightarrow y \,R\, x .
 $$
 
-Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists a, b \in A:\; a \,R\, b \land \neg(b \,R\, a)$.
+Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists x, y \in A:\; x \,R\, y \land \neg(y \,R\, x)$.
 :::
 
 :::tip[In einfachen Worten]
-Wenn $a$ zu $b$ passt, dann passt auch $b$ zu $a$. Bei "sitzt neben" ist das so: Sitzt Anna neben Ben, dann sitzt Ben neben Anna.
+Wenn $x$ zu $y$ passt, dann passt auch $y$ zu $x$. Bei "ist im selben Fachsemester wie" ist das so: Sind Anna und Ben im selben Fachsemester, dann sind es auch Ben und Anna.
 :::
 
-**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a + b$ ist gerade. Seien $a, b$ beliebig mit $a \,R\, b$:
+**Aufgabe.** Sei $M$ die Menge der Studierenden und $s(x)$ das Fachsemester von $x$. Zwei Studierende stehen in Relation $R_1$, wenn sie im selben Fachsemester sind, also $x \,R_1\, y \Leftrightarrow s(x) = s(y)$. Untersuche $R_1$ auf Symmetrie.
+
+**Lösung.** Seien $x, y \in M$ beliebig:
 
 $$
-a \,R\, b \;\Leftrightarrow\; a + b \text{ ist gerade} \;\Leftrightarrow\; b + a \text{ ist gerade} \;\Leftrightarrow\; b \,R\, a .
+x \,R_1\, y \;\Leftrightarrow\; s(x) = s(y) \;\Leftrightarrow\; s(y) = s(x) \;\Leftrightarrow\; y \,R_1\, x .
 $$
 
-Der mittlere Schritt ist das Kommutativgesetz $a + b = b + a$. Also folgt aus $a \,R\, b$ immer $b \,R\, a$, und $R$ ist symmetrisch.
+Der mittlere Schritt gilt, weil die Gleichheit von Zahlen in beide Richtungen gilt. Also folgt aus $x \,R_1\, y$ immer $y \,R_1\, x$, und $R_1$ ist symmetrisch.
 
-**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a \leq b$. Wir wählen $a = 1$ und $b = 2$:
+**Aufgabe.** Ist die Relation $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ auf $\mathbb{N} \times \mathbb{N}$ symmetrisch?
+
+**Lösung.** Nein. Gegenbeispiel mit $(a, b) = (1, 2)$ und $(c, d) = (3, 4)$:
 
 $$
-1 \leq 2 \ \text{(wahr)}, \qquad 2 \leq 1 \ \text{(falsch)} .
+(1,2) \,R\, (3,4) \;\Leftrightarrow\; 1 \cdot 4 \leq 2 \cdot 3 \;\Leftrightarrow\; 4 \leq 6 \quad\text{(wahr)},
 $$
 
-Es gilt $1 \,R\, 2$, aber nicht $2 \,R\, 1$. Damit ist $\leq$ **nicht** symmetrisch.
+$$
+(3,4) \,R\, (1,2) \;\Leftrightarrow\; 3 \cdot 2 \leq 4 \cdot 1 \;\Leftrightarrow\; 6 \leq 4 \quad\text{(falsch)}.
+$$
+
+Es gilt $(1,2) \,R\, (3,4)$, aber nicht $(3,4) \,R\, (1,2)$. Damit ist $R$ **nicht** symmetrisch.
 
 ## Antisymmetrisch
 
@@ -109,31 +101,39 @@ Es gilt $1 \,R\, 2$, aber nicht $2 \,R\, 1$. Damit ist $\leq$ **nicht** symmetri
 $R$ heißt **antisymmetrisch**, wenn aus Relation in beide Richtungen schon Gleichheit folgt:
 
 $$
-\forall a, b \in A:\; (a \,R\, b \land b \,R\, a) \Rightarrow a = b .
+\forall x, y \in A:\; (x \,R\, y \land y \,R\, x) \Rightarrow x = y .
 $$
 
-Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists a, b \in A:\; a \,R\, b \land b \,R\, a \land a \neq b$.
+Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists x, y \in A:\; x \,R\, y \land y \,R\, x \land x \neq y$.
 :::
 
 :::tip[In einfachen Worten]
-Zwei **verschiedene** Elemente dürfen nie in beide Richtungen zueinander in Relation stehen. Bei "ist kleiner oder gleich" ist das so: Gilt $a$ vor $b$ und $b$ vor $a$, müssen sie dasselbe Element sein.
+Zwei **verschiedene** Elemente dürfen nie in beide Richtungen zueinander in Relation stehen. Bei "hat dieselbe Matrikelnummer wie" ist das so: Wer dieselbe Matrikelnummer hat, ist dieselbe Person.
 :::
 
-**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a \leq b$. Seien $a, b$ beliebig mit $a \,R\, b$ und $b \,R\, a$:
+**Aufgabe.** Sei $M$ die Menge der Studierenden und $m(x)$ die Matrikelnummer von $x$. Zwei Studierende stehen in Relation $R_2$, wenn sie dieselbe Matrikelnummer haben, also $x \,R_2\, y \Leftrightarrow m(x) = m(y)$. Untersuche $R_2$ auf Antisymmetrie.
+
+**Lösung.** Seien $x, y \in M$ mit $x \,R_2\, y$ und $y \,R_2\, x$:
 
 $$
-a \,R\, b \land b \,R\, a \;\Leftrightarrow\; a \leq b \land b \leq a \;\Rightarrow\; a = b .
+x \,R_2\, y \land y \,R_2\, x \;\Leftrightarrow\; m(x) = m(y) \land m(y) = m(x) \;\Rightarrow\; m(x) = m(y) \;\Rightarrow\; x = y .
 $$
 
-Der letzte Schritt gilt, weil eine Zahl, die weder größer noch kleiner als die andere ist, ihr gleich ist. Also ist $\leq$ antisymmetrisch.
+Der letzte Schritt gilt, weil Matrikelnummern eindeutig sind: Verschiedene Studierende haben verschiedene Nummern. Also ist $R_2$ antisymmetrisch.
 
-**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow a + b$ ist gerade. Wir wählen $a = 1$ und $b = 3$:
+**Aufgabe.** Ist die Relation $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ auf $\mathbb{N} \times \mathbb{N}$ antisymmetrisch?
+
+**Lösung.** Nein. Gegenbeispiel mit $(a, b) = (1, 2)$ und $(c, d) = (2, 4)$:
 
 $$
-1 + 3 = 4 \text{ ist gerade}, \quad 3 + 1 = 4 \text{ ist gerade}, \quad \text{aber } 1 \neq 3 .
+(1,2) \,R\, (2,4) \;\Leftrightarrow\; 1 \cdot 4 \leq 2 \cdot 2 \;\Leftrightarrow\; 4 \leq 4 \quad\text{(wahr)},
 $$
 
-Es gilt $1 \,R\, 3$ und $3 \,R\, 1$ mit $1 \neq 3$. Damit ist diese Relation **nicht** antisymmetrisch.
+$$
+(2,4) \,R\, (1,2) \;\Leftrightarrow\; 2 \cdot 2 \leq 4 \cdot 1 \;\Leftrightarrow\; 4 \leq 4 \quad\text{(wahr)}.
+$$
+
+Beide Richtungen gelten, aber $(1,2) \neq (2,4)$. Damit ist $R$ **nicht** antisymmetrisch.
 
 ## Transitiv
 
@@ -141,64 +141,114 @@ Es gilt $1 \,R\, 3$ und $3 \,R\, 1$ mit $1 \neq 3$. Damit ist diese Relation **n
 $R$ heißt **transitiv**, wenn sich Relationen verketten lassen:
 
 $$
-\forall a, b, c \in A:\; (a \,R\, b \land b \,R\, c) \Rightarrow a \,R\, c .
+\forall x, y, z \in A:\; (x \,R\, y \land y \,R\, z) \Rightarrow x \,R\, z .
 $$
 
-Widerlegt wird die Eigenschaft durch eine einzige Kette: $\exists a, b, c \in A:\; a \,R\, b \land b \,R\, c \land \neg(a \,R\, c)$.
+Widerlegt wird die Eigenschaft durch eine einzige Kette: $\exists x, y, z \in A:\; x \,R\, y \land y \,R\, z \land \neg(x \,R\, z)$.
 :::
 
 :::tip[In einfachen Worten]
-Ein Umweg über einen Dritten ist nicht nötig. Bei "ist ein Teiler von" ist das so: Teilt $a$ die Zahl $b$ und $b$ die Zahl $c$, dann teilt $a$ auch $c$.
+Ein Umweg über einen Dritten ist nicht nötig. Bei "ist im selben Fachsemester wie" ist das so: Ist Anna mit Ben und Ben mit Carla im selben Fachsemester, dann sind auch Anna und Carla im selben.
 :::
 
-**Beispiel mit Rechenweg.** Sei $a \,R\, b \Leftrightarrow a \mid b$, das heißt, $b = k \cdot a$ für ein $k \in \mathbb{N}$. Seien $a, b, c$ beliebig mit $a \,R\, b$ und $b \,R\, c$. Dann gibt es $k, l \in \mathbb{N}$ mit
+**Aufgabe.** Zeige, dass die Relation $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ auf $\mathbb{N} \times \mathbb{N}$ transitiv ist.
+
+**Lösung.** Seien $(a, b)$, $(c, d)$ und $(e, f)$ beliebig mit $(a, b) \,R\, (c, d)$ und $(c, d) \,R\, (e, f)$. Das bedeutet
 
 $$
-b = k \cdot a \qquad\text{und}\qquad c = l \cdot b .
+a d \leq b c \quad (1) \qquad\text{und}\qquad c f \leq d e \quad (2) .
 $$
 
-Wir setzen die erste Gleichung in die zweite ein:
+Wir multiplizieren (1) mit $f$ und (2) mit $b$. Das ist erlaubt, weil $f, b > 0$ sind und die Ungleichung dabei erhalten bleibt:
 
 $$
-c = l \cdot b = l \cdot (k \cdot a) = (l \cdot k) \cdot a .
+\begin{aligned}
+a d f &\leq b c f && (1) \cdot f \\
+b c f &\leq b d e && (2) \cdot b .
+\end{aligned}
 $$
 
-Da $l \cdot k \in \mathbb{N}$ ist, folgt $a \mid c$, also $a \,R\, c$. Damit ist $\mid$ transitiv.
-
-**Gegenbeispiel.** Sei $a \,R\, b \Leftrightarrow |a - b| = 1$ ("sind Nachbarzahlen"). Wir wählen $a = 1$, $b = 2$, $c = 3$:
+Beide Ungleichungen haben $b c f$ in der Mitte. Also gilt
 
 $$
-|1 - 2| = 1 \ \text{(wahr)}, \qquad |2 - 3| = 1 \ \text{(wahr)}, \qquad |1 - 3| = 2 \neq 1 \ \text{(falsch)} .
+a d f \leq b c f \leq b d e \quad\Rightarrow\quad a d f \leq b d e .
 $$
 
-Es gilt $1 \,R\, 2$ und $2 \,R\, 3$, aber nicht $1 \,R\, 3$. Damit ist diese Relation **nicht** transitiv.
+Jetzt teilen wir durch $d$. Das ist erlaubt, weil $d \geq 1$ ist:
+
+$$
+a d f \leq b d e \;\; | : d \quad\Rightarrow\quad a f \leq b e \;\Leftrightarrow\; (a, b) \,R\, (e, f) .
+$$
+
+Damit folgt aus $(a, b) \,R\, (c, d)$ und $(c, d) \,R\, (e, f)$ immer $(a, b) \,R\, (e, f)$. Also ist $R$ transitiv.
+
+:::caution[Stolperstelle]
+Die Division durch $d$ geht nur für $d \neq 0$. Rechnet man mit $\mathbb{N}_0 = \{0, 1, 2, \dots\}$, ist die Relation **nicht** transitiv. Gegenbeispiel: $(1,0) \,R\, (0,0)$ und $(0,0) \,R\, (0,1)$ sind beide wahr, denn $1 \cdot 0 \leq 0 \cdot 0$ und $0 \cdot 1 \leq 0 \cdot 0$. Aber $(1,0) \,R\, (0,1)$ wäre $1 \cdot 1 \leq 0 \cdot 0$, also $1 \leq 0$, und das ist falsch. Schreibe deshalb beim Beweis dazu, dass $\mathbb{N}$ bei $1$ beginnt.
+:::
 
 ## Überblick
 
-Fünf Relationen auf $\mathbb{N}$ und ihre Eigenschaften:
+Vier Relationen aus den Beispielen und ihre Eigenschaften. Dabei ist $P(n)$ die Menge der Primteiler von $n$, zum Beispiel $P(12) = \{2, 3\}$.
 
-| Eigenschaft | $a \leq b$ | $a < b$ | $a + b$ gerade | $a \mid b$ | $\lvert a - b \rvert = 1$ |
-|---|---|---|---|---|---|
-| reflexiv | ja | nein | ja | ja | nein |
-| irreflexiv | nein | ja | nein | nein | ja |
-| symmetrisch | nein | nein | ja | nein | ja |
-| antisymmetrisch | ja | ja | nein | ja | nein |
-| transitiv | ja | ja | ja | ja | nein |
+| Eigenschaft | $a d \leq b c$ auf $\mathbb{N}^2$ | gleiches Fachsemester | gleiche Matrikelnummer | $P(a) \subseteq P(b)$ |
+|---|---|---|---|---|
+| reflexiv | ja | ja | ja | ja |
+| symmetrisch | nein | ja | ja | nein |
+| antisymmetrisch | nein | nein | ja | nein |
+| transitiv | ja | ja | ja | ja |
 
 :::caution[Stolperstelle]
-Symmetrisch und antisymmetrisch sind **keine Gegensätze**. Die Gleichheit $a = b$ ist beides zugleich. Die Relation $\lvert a - b \rvert = 1$ ist symmetrisch, aber nicht antisymmetrisch, und $a \leq b$ ist antisymmetrisch, aber nicht symmetrisch. Es gibt auch Relationen, die keins von beiden sind. Auch reflexiv und irreflexiv schließen sich nur auf nichtleeren Mengen gegenseitig aus, und eine Relation kann **keins von beiden** sein.
+Symmetrisch und antisymmetrisch sind **keine Gegensätze**. "Gleiche Matrikelnummer" ist beides zugleich, denn sie bedeutet nur Gleichheit. Die Relation $a d \leq b c$ ist keins von beiden. "Gleiches Fachsemester" ist symmetrisch, aber nicht antisymmetrisch, sobald zwei verschiedene Studierende im selben Fachsemester sind.
 :::
 
 ## Relationen ergänzen
 
-Fehlt einer Relation eine Eigenschaft, kann man fehlende Paare hinzufügen.
+Fehlt einer Relation eine Eigenschaft, kann man fehlende Paare hinzufügen. Gesucht ist dann die **kleinste** Relation, die die gewünschten Eigenschaften hat und die alte Relation enthält.
 
-- **Reflexiv machen:** alle Paare $(a, a)$ ergänzen.
-- **Symmetrisch machen:** zu jedem Paar $(a, b)$ das Paar $(b, a)$ ergänzen.
-- **Transitiv machen:** zu $(a,b)$ und $(b,c)$ das Paar $(a,c)$ ergänzen.
+- **Transitiv machen:** zu $(x,y)$ und $(y,z)$ das Paar $(x,z)$ ergänzen.
+- **Reflexiv machen:** alle Paare $(x, x)$ ergänzen.
+- **Symmetrisch machen:** zu jedem Paar $(x, y)$ das Paar $(y, x)$ ergänzen.
 
-**Beispiel:** Die Relation $R = \{(1,2),(2,3)\}$ auf $\{1,2,3\}$ soll reflexiv, symmetrisch und transitiv werden. Man ergänzt $(1,1),(2,2),(3,3)$, dann $(2,1),(3,2)$, und dann verlangt die Transitivität unter anderem $(1,3)$ und $(3,1)$. Am Ende liegen alle $9$ Paare von $A \times A$ in der Relation, es sind also $7$ Paare neu.
+### Aufgabe: Kleinste Erweiterungen
+
+Sei $A = \{a, b, c, d, e, f\}$ und
+$$
+R = \{(a,b),\ (c,b),\ (b,d),\ (e,f),\ (f,e)\} .
+$$
+
+Bestimme jeweils die Relation mit der kleinsten Elementanzahl, für die gilt:
+
+- **a)** $R \subseteq R_1$ und $R_1$ ist transitiv.
+- **b)** $R \subseteq R_2$ und $R_2$ ist transitiv und reflexiv.
+- **c)** $R \subseteq R_3$ und $R_3$ ist symmetrisch, transitiv und reflexiv.
+
+**Lösung.**
+
+**a) Kleinste transitive Relation $R_1 \supseteq R$.** Wir suchen alle Ketten:
+
+- $(a,b)$ und $(b,d)$ verlangen $(a,d)$.
+- $(c,b)$ und $(b,d)$ verlangen $(c,d)$.
+- $(e,f)$ und $(f,e)$ verlangen $(e,e)$.
+- $(f,e)$ und $(e,f)$ verlangen $(f,f)$.
+
+Mit den vier neuen Paaren entstehen keine weiteren Ketten, die Relation ist jetzt transitiv:
+
+$$
+R_1 = R \cup \{(a,d),\ (c,d),\ (e,e),\ (f,f)\}, \qquad |R_1| = 5 + 4 = 9 .
+$$
+
+**b) Kleinste transitive und reflexive Relation $R_2 \supseteq R$.** Zu $R_1$ fehlen noch die Paare $(a,a)$, $(b,b)$, $(c,c)$ und $(d,d)$. Die Paare $(e,e)$ und $(f,f)$ sind schon da. Die neuen Schleifen erzeugen keine neuen Ketten:
+
+$$
+R_2 = R_1 \cup \{(a,a),\ (b,b),\ (c,c),\ (d,d)\}, \qquad |R_2| = 9 + 4 = 13 .
+$$
+
+**c) Kleinste symmetrische, transitive und reflexive Relation $R_3 \supseteq R$.** Das ist eine Äquivalenzrelation. Wir sehen, welche Elemente die Paare von $R$ verbinden: $a, b, c, d$ hängen über $(a,b)$, $(c,b)$, $(b,d)$ zusammen, und $e, f$ hängen über $(e,f)$ zusammen. Eine Äquivalenzrelation muss innerhalb jeder solchen Gruppe **alle** Paare enthalten:
+
+$$
+R_3 = \{a,b,c,d\} \times \{a,b,c,d\} \;\cup\; \{e,f\} \times \{e,f\}, \qquad |R_3| = 4^2 + 2^2 = 16 + 4 = 20 .
+$$
 
 :::caution[Stolperstelle]
-Die Reihenfolge ist wichtig. Ergänzt man zuerst die Transitivität und danach die Symmetrie, entstehen wieder Lücken: Aus $\{(1,2),(2,3)\}$ wird erst $\{(1,2),(1,3),(2,3)\}$, nach dem Symmetrisieren fehlt aber zum Beispiel $(1,1)$ für die Transitivität. Prüfe nach dem Ergänzen immer **alle** Eigenschaften noch einmal.
+Die Reihenfolge ist wichtig. Ergänzt man zuerst die Transitivität und danach die Symmetrie, entstehen wieder Lücken. Prüfe nach dem Ergänzen immer **alle** gewünschten Eigenschaften noch einmal.
 :::
