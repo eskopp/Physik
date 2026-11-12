@@ -3,6 +3,7 @@ title: Mengen und Mengenoperationen
 description: Was eine Menge ist, wie man sie schreibt und wie man Mengen verknüpft.
 sidebar:
   order: 2
+  label: "Mengen"
 ---
 
 *In einem Satz: Eine Menge ist eine Sammlung von Dingen, und es zählt nur, ob ein Ding drin ist, nicht wie oft oder in welcher Reihenfolge.*
