@@ -55,8 +55,56 @@ $$
 **5. Probe:** $(-2)^3 = -8$. Die beiden anderen Lösungen haben ebenfalls den Betrag $2$ und den Winkel $\pm 60^\circ$ und ergeben beim Potenzieren mit $3$ den Winkel $\pm 180^\circ$, also $-8$.
 
 :::caution[Stolperstelle]
-Wer nur $z = -2$ nennt, hat zwei Lösungen vergessen. Über den komplexen Zahlen hat $z^n = w$ **immer $n$ Lösungen**, nicht nur die reelle.
+Wer nur $z = -2$ nennt, hat zwei Lösungen vergessen. Über den komplexen Zahlen hat $z^n = w$ für **$w \neq 0$ genau $n$ verschiedene Lösungen**, nicht nur die reelle.
+
+Der Fall $w = 0$ ist die Ausnahme: Aus $z^n = 0$ folgt $|z|^n = 0$, also $z = 0$. Es gibt nur **eine** verschiedene Lösung. Man sagt, $z = 0$ ist eine $n$-fache Lösung (Vielfachheit $n$). Deshalb verlangt die Formel oben $w \neq 0$, denn für $w = 0$ hat die Zahl keinen Winkel $\theta$.
 :::
+
+### Beispiel: Dritte Wurzel aus Wurzel drei minus i
+
+*Zu zeigen:* Alle drei Lösungen von $z^3 - \sqrt{3} + i = 0$.
+
+**0. Umstellen:** Wir bringen die Gleichung in die Form $z^3 = w$:
+
+$$
+z^3 - \sqrt{3} + i = 0 \;\Leftrightarrow\; z^3 = \sqrt{3} - i .
+$$
+
+**1. Eulerform von $w = \sqrt{3} - i$:** Betrag $\rho = \sqrt{3 + 1} = 2$. Die Zahl hat den Realteil $\sqrt{3} > 0$ und den Imaginärteil $-1 < 0$, sie liegt im vierten Quadranten. Mit $\tan\theta = \dfrac{-1}{\sqrt{3}}$ folgt $\theta = -\dfrac{\pi}{6}$ ($-30^\circ$). Also
+
+$$
+w = 2\,e^{-i\pi/6} .
+$$
+
+**2. Länge:** $\sqrt[3]{2} \approx 1{,}260$.
+
+**3. Winkel:** $\dfrac{-\pi/6 + 2\pi k}{3}$ für $k = 0, 1, 2$:
+
+$$
+-\frac{\pi}{18}\ (-10^\circ), \qquad \frac{11\pi}{18}\ (110^\circ), \qquad \frac{23\pi}{18}\ (230^\circ) .
+$$
+
+**4. Lösungen:**
+
+$$
+z_k = \sqrt[3]{2}\;e^{\,i\,\varphi_k} \quad\text{mit}\quad \varphi_0 = -10^\circ,\ \varphi_1 = 110^\circ,\ \varphi_2 = 230^\circ .
+$$
+
+In der Form $a + bi$, mit $\cos\varphi$ und $\sin\varphi$ aus dem Taschenrechner:
+
+$$
+\begin{aligned}
+z_0 &\approx 1{,}241 - 0{,}219\,i, \\
+z_1 &\approx -0{,}431 + 1{,}184\,i, \\
+z_2 &\approx -0{,}810 - 0{,}965\,i .
+\end{aligned}
+$$
+
+Diese Winkel sind keine schönen Werte, deshalb gibt es hier keine einfache Form mit Wurzeln. Man lässt die Lösungen in Eulerform stehen oder gibt Näherungswerte an.
+
+**5. Probe:** Es ist $|z_k|^3 = 2 = |w|$. Für $z_0$ ist $3 \cdot (-10^\circ) = -30^\circ$, also $z_0^3 = 2\,e^{-i\pi/6} = \sqrt{3} - i$. Für $z_1$ ist $3 \cdot 110^\circ = 330^\circ = -30^\circ + 360^\circ$, und für $z_2$ ist $3 \cdot 230^\circ = 690^\circ = -30^\circ + 720^\circ$. In allen drei Fällen kommt derselbe Winkel $-30^\circ$ heraus.
+
+Die drei Lösungen liegen als Ecken eines gleichseitigen Dreiecks auf dem Kreis mit Radius $\sqrt[3]{2}$ um $0$, jeweils um $120^\circ$ gedreht.
 
 ## Gleichungen mit Verschiebung
 
@@ -143,7 +191,25 @@ $$
 
 Probe für $z = -1 + 2i$: $(-1 + 2i)^2 + 2(-1 + 2i) + 5 = (1 - 4i - 4) + (-2 + 4i) + 5 = 0$.
 
-### Beispiel 2: Komplexe Koeffizienten
+### Beispiel 2: Eine typische Gleichung mit negativer Diskriminante
+
+*Zu zeigen:* Beide Lösungen von $z^2 + 6z + 13 = 0$.
+
+Hier ist $a = 1$, $b = 6$ und $c = 13$. Damit
+
+$$
+D = 6^2 - 4 \cdot 1 \cdot 13 = 36 - 52 = -16 .
+$$
+
+Eine Wurzel aus $-16$ ist $w = 4i$, denn $(4i)^2 = 16 \cdot i^2 = -16$. Also
+
+$$
+z_{1,2} = \frac{-6 \pm 4i}{2} = -3 \pm 2i .
+$$
+
+Probe für $z = -3 + 2i$: $(-3 + 2i)^2 + 6(-3 + 2i) + 13 = (9 - 12i - 4) + (-18 + 12i) + 13 = 0$. Die zweite Lösung $-3 - 2i$ ist das **Konjugierte** der ersten. Das ist kein Zufall: Bei reellen Koeffizienten treten nicht reelle Lösungen immer als konjugiertes Paar auf.
+
+### Beispiel 3: Komplexe Koeffizienten
 
 *Zu zeigen:* Beide Lösungen von $z^2 + (1 - i)\,z - i = 0$.
 
@@ -197,7 +263,13 @@ Probe für $z = 2i$: $(2i)^3 - 2(2i)^2 + 4(2i) - 8 = -8i + 8 + 8i - 8 = 0$, mit 
 
 ### Beispiel: Bruch mit Nenner z minus i
 
-*Zu zeigen:* Die Lösung $z$ mit $z \neq i$.
+*Zu zeigen:* Die Lösung $z$ der Gleichung
+
+$$
+\frac{z + 1}{z - i} = 2
+$$
+
+mit $z \neq i$.
 
 **1. Verboten:** $z \neq i$, sonst ist der Nenner null.
 
