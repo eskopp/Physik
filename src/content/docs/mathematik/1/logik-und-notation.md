@@ -85,8 +85,7 @@ Alle vier Verknüpfungen auf einen Blick:
 $A \Rightarrow B$ ist **nicht** dasselbe wie $B \Rightarrow A$. Aus "Wenn es regnet, ist die Straße nass" folgt nicht "Wenn die Straße nass ist, regnet es". Die Straße kann auch von einem Putzwagen nass sein. Gleichwertig zu $A \Rightarrow B$ ist dagegen die **Kontraposition** $\neg B \Rightarrow \neg A$: "Ist die Straße trocken, dann regnet es nicht."
 :::
 
-<details>
-<summary>Warum die Verneinung einer Implikation "A und nicht B" bedeutet</summary>
+### Warum die Verneinung einer Implikation „A und nicht B“ bedeutet
 
 Die Implikation ist nur falsch, wenn $A$ wahr und $B$ falsch ist. Genau dann ist $A \land \neg B$ wahr. In allen anderen drei Zeilen der Wahrheitstafel ist $A \Rightarrow B$ wahr und $A \land \neg B$ falsch. Also gilt
 
@@ -95,8 +94,6 @@ $$
 $$
 
 Das ist wichtig für Widerspruchsbeweise und Gegenbeispiele.
-
-</details>
 
 ## Quantoren
 

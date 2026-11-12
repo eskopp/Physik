@@ -46,8 +46,7 @@ Das passt zur Formel: $2^0 = 1$ und $2^1 = 2$.
 Unterscheide $\in$ und $\subseteq$. Für $A = \{a, b\}$ gilt $\{a\} \in \mathcal{P}(A)$, denn $\{a\}$ ist eine Teilmenge von $A$. Es gilt aber $a \notin \mathcal{P}(A)$, denn $a$ ist ein Element von $A$ und selbst keine Menge in $\mathcal{P}(A)$. Außerdem liegen immer $\emptyset \in \mathcal{P}(A)$ und $A \in \mathcal{P}(A)$.
 :::
 
-<details>
-<summary>Warum es genau 2<sup>n</sup> Teilmengen sind</summary>
+### Warum es genau $2^n$ Teilmengen sind
 
 Nummeriere die Elemente $a_1, \dots, a_n$. Für jedes $a_i$ gibt es zwei Möglichkeiten: Es liegt in der Teilmenge oder nicht. Diese Entscheidungen sind voneinander unabhängig. Also gibt es insgesamt
 
@@ -56,8 +55,6 @@ $$
 $$
 
 verschiedene Kombinationen, und jede liefert genau eine Teilmenge.
-
-</details>
 
 ## Potenzmengen und Teilmengen
 

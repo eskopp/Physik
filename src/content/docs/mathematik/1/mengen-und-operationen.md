@@ -37,12 +37,9 @@ Stell dir eine Tüte mit Murmeln vor. Eine Menge sagt nur, welche Sorten drin si
 $\emptyset$ und $\{\emptyset\}$ sind verschieden. $\emptyset$ ist eine leere Tüte. $\{\emptyset\}$ ist eine Tüte, in der genau ein Ding liegt, nämlich eine leere Tüte. Also hat $\emptyset$ null Elemente und $\{\emptyset\}$ ein Element.
 :::
 
-<details>
-<summary>Warum die leere Menge Teilmenge jeder Menge ist</summary>
+### Warum die leere Menge Teilmenge jeder Menge ist
 
 Für $\emptyset \subseteq A$ muss die Aussage "$x \in \emptyset \Rightarrow x \in A$" für jedes $x$ gelten. Die Vorbedingung $x \in \emptyset$ ist aber immer falsch. Nach der Wahrheitstafel der Implikation ist die Aussage dann wahr. Es gibt kein Element von $\emptyset$, das in $A$ fehlen könnte.
-
-</details>
 
 ## Mengenoperationen
 
