@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import lucode from 'lucode-starlight';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -12,16 +13,18 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Technische Physik',
-      logo: { src: './src/assets/logo.svg' },
+      logo: { src: './src/assets/logo.svg', alt: 'Technische Physik', replacesTitle: false },
       favicon: '/favicon.svg',
-      customCss: ['./src/styles/custom.css'],
-      social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/eskopp/Physik' },
-      ],
-      lastUpdated: true,
-      components: { SocialIcons: './src/components/SocialIcons.astro' },
       defaultLocale: 'root',
       locales: { root: { label: 'Deutsch', lang: 'de' } },
+      lastUpdated: true,
+      editLink: { baseUrl: 'https://github.com/eskopp/Physik/edit/main/' },
+      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/eskopp/Physik' }],
+      plugins: [
+        lucode({
+          navLinks: [{ label: 'Dokumentation', link: '/start/' }],
+        }),
+      ],
       head: [
         {
           tag: 'link',
@@ -31,9 +34,7 @@ export default defineConfig({
           },
         },
       ],
-      sidebar: [
-        { label: 'Start', items: [{ label: 'Übersicht', slug: 'start' }] },
-      ],
+      sidebar: [{ label: 'Start', items: [{ label: 'Übersicht', slug: 'start' }] }],
     }),
   ],
 });

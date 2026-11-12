@@ -2,42 +2,48 @@
 title: Technische Physik
 description: Mitschriften, Übungen und Formeln aus dem Studium der Technischen Physik an der TU Ilmenau.
 template: splash
-pagefind: false
+hero:
+  tagline: Mitschriften, Übungen und Formeln aus dem Studium an der TU Ilmenau, sauber gesetzt und durchsuchbar.
+  announcement:
+    text: TU Ilmenau
+    link: /start/
+  actions:
+    - text: Loslegen
+      link: /start/
+      icon: right-arrow
+    - text: Auf GitHub ansehen
+      link: https://github.com/eskopp/Physik
+      variant: secondary
 ---
 
-<div class="hx-landing">
-  <a class="hx-badge" href="/start/"><span class="hx-dot"></span>TU Ilmenau<span class="hx-arrow">→</span></a>
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { ContainerSection } from 'lucode-starlight/components';
 
-  <h1 class="hx-title">Physik verstehen,<br />sauber aufgeschrieben</h1>
+<ContainerSection>
 
-  <p class="hx-sub">Mitschriften, Übungen und Formeln aus dem Studium <br />der Technischen Physik, durchsuchbar und überall lesbar.</p>
+## Was du hier findest
 
-  <a class="hx-button" href="/start/">Loslegen</a>
+<CardGrid>
+  <Card title="Mitschriften" icon="pencil">
+    Vorlesungen nach Modul gegliedert, mit Herleitungen statt nur Ergebnissen.
+  </Card>
+  <Card title="Übungen" icon="open-book">
+    Aufgaben mit ausgearbeiteten Lösungen und dem Gedankengang dahinter.
+  </Card>
+  <Card title="Formeln mit KaTeX" icon="seti:json">
+    Gleichungen sauber gesetzt, im Fließtext wie $E = mc^2$ oder abgesetzt.
+  </Card>
+  <Card title="Volltextsuche" icon="magnifier">
+    Die Suche läuft direkt im Browser über alle Seiten, ohne Konto und ohne Tracking.
+  </Card>
+</CardGrid>
 
-  <div class="hx-grid">
-    <div class="hx-card" style="--glow: 168 85 247">
-      <h3>Mitschriften</h3>
-      <p>Vorlesungen nach Modul gegliedert, mit Herleitungen statt nur Ergebnissen.</p>
-    </div>
-    <div class="hx-card" style="--glow: 236 72 153">
-      <h3>Übungen</h3>
-      <p>Aufgaben mit ausgearbeiteten Lösungen und dem Gedankengang dahinter.</p>
-    </div>
-    <div class="hx-card" style="--glow: 234 179 8">
-      <h3>Formeln mit KaTeX</h3>
-      <p>Gleichungen sauber gesetzt, im Fließtext und abgesetzt, ohne Bilder und ohne Unschärfe.</p>
-    </div>
-    <div class="hx-card" style="--glow: 59 130 246">
-      <h3>Volltextsuche</h3>
-      <p>Die Suche läuft direkt im Browser über alle Seiten, ohne Konto und ohne Tracking.</p>
-    </div>
-    <div class="hx-card" style="--glow: 34 197 94">
-      <h3>Hell und dunkel</h3>
-      <p>Passt sich auf Wunsch dem System an. Gut lesbar am Handy, Tablet und Rechner.</p>
-    </div>
-    <div class="hx-card" style="--glow: 20 184 166">
-      <h3>Offen auf GitHub</h3>
-      <p>Der Quelltext liegt öffentlich auf GitHub, gebaut und gehostet über GitHub Pages.</p>
-    </div>
-  </div>
-</div>
+## Formeln im Text
+
+Abgesetzte Gleichungen werden mit KaTeX gesetzt:
+
+$$
+\oint_{\partial A} \vec{E}\cdot \mathrm{d}\vec{s} = -\frac{\mathrm{d}}{\mathrm{d}t}\int_A \vec{B}\cdot \mathrm{d}\vec{A}
+$$
+
+</ContainerSection>
