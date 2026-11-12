@@ -26,7 +26,7 @@ Eine Äquivalenzrelation fasst Dinge zusammen, die in einer bestimmten Hinsicht 
 
 Sei $M$ die Menge der Studierenden und $s(x)$ das Fachsemester von $x$. Gib eine Relation $R_1$ an, die eine Äquivalenzrelation auf $M$ ist, und begründe es. Zwei Studierende stehen in Relation, wenn sie im selben Fachsemester sind.
 
-**Lösung.** Wir setzen $x \,R_1\, y \Leftrightarrow s(x) = s(y)$ und prüfen die drei Eigenschaften für beliebige $x, y, z \in M$.
+**Lösung.** *Zu zeigen:* $R_1$ ist reflexiv, symmetrisch und transitiv. Wir setzen $x \,R_1\, y \Leftrightarrow s(x) = s(y)$ und prüfen die drei Eigenschaften einzeln für beliebige $x, y, z \in M$.
 
 **Reflexiv.** Ich bin im selben Fachsemester wie ich selbst:
 
@@ -60,7 +60,7 @@ $$
 
 Untersuche $\sim$ auf Reflexivität, Symmetrie und Transitivität. Ist $\sim$ eine Äquivalenz- oder eine Ordnungsrelation?
 
-**Lösung.** Seien $a, b, c \in \mathbb{N}$ beliebig.
+**Lösung.** *Zu zeigen:* $\sim$ ist reflexiv, symmetrisch und transitiv. Dann ist es eine Äquivalenzrelation. Seien $a, b, c \in \mathbb{N}$ beliebig.
 
 **Reflexiv:** $a \sim a \Leftrightarrow P(a) = P(a)$. Das stimmt immer.
 
@@ -90,7 +90,7 @@ Eine Ordnung legt fest, wer "vor" wem kommt, und jeder ist mit sich selbst "höc
 
 Mit $P$ wie oben wird auf $\mathbb{N}$ eine Relation $R$ definiert durch $a \,R\, b \Leftrightarrow P(a) \subseteq P(b)$. Untersuche $R$ auf Reflexivität, Symmetrie, Antisymmetrie und Transitivität. Ist $R$ eine Äquivalenz- oder eine Ordnungsrelation?
 
-**Lösung.** Wir prüfen die Eigenschaften einzeln.
+**Lösung.** *Zu zeigen:* Für jede der vier Eigenschaften entweder ein Beweis oder ein Gegenbeispiel. Danach entscheiden wir, ob $R$ eine Äquivalenz- oder eine Ordnungsrelation ist. Wir prüfen die Eigenschaften einzeln.
 
 **Reflexiv:** $a \,R\, a \Leftrightarrow P(a) \subseteq P(a)$. Jede Menge ist Teilmenge von sich selbst.
 

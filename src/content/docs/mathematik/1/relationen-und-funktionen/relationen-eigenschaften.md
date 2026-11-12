@@ -45,7 +45,9 @@ Jeder steht in Beziehung zu sich selbst. Bei "ist im selben Fachsemester wie" is
 
 **Aufgabe.** Auf $\mathbb{N} \times \mathbb{N}$ ist durch $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ eine Relation erklärt. Untersuche $R$ auf Reflexivität.
 
-**Lösung.** Sei $(a, b)$ beliebig. Wir setzen $(c, d) = (a, b)$ ein:
+**Lösung.** *Zu zeigen:* $(a, b) \,R\, (a, b)$ für **jedes** Paar, am Ende muss also $a \cdot b \leq b \cdot a$ dastehen.
+
+Sei $(a, b)$ beliebig. Wir setzen $(c, d) = (a, b)$ ein:
 
 $$
 (a, b) \,R\, (a, b) \;\Leftrightarrow\; a \cdot b \leq b \cdot a \;\Leftrightarrow\; a \cdot b \leq a \cdot b .
@@ -53,7 +55,7 @@ $$
 
 Der zweite Schritt ist das Kommutativgesetz $b \cdot a = a \cdot b$. Die letzte Aussage ist für alle $a, b \in \mathbb{N}$ wahr. Also gilt $(a, b) \,R\, (a, b)$ für jedes Paar, und $R$ ist reflexiv.
 
-**Gegenbeispiel.** Sei $x \,R\, y \Leftrightarrow x < y$ auf $\mathbb{N}$. Dann ist $x \,R\, x \Leftrightarrow x < x$, und das ist falsch. Schon für $x = 1$ gilt $1 < 1$ nicht. Also ist "kleiner als" **nicht** reflexiv.
+**Gegenbeispiel.** *Zu zeigen:* "kleiner als" ist nicht reflexiv, wir brauchen also **ein** $x$ mit $\neg(x \,R\, x)$. Sei $x \,R\, y \Leftrightarrow x < y$ auf $\mathbb{N}$. Dann ist $x \,R\, x \Leftrightarrow x < x$, und das ist falsch. Schon für $x = 1$ gilt $1 < 1$ nicht. Also ist "kleiner als" **nicht** reflexiv.
 
 ## Symmetrisch
 
@@ -73,7 +75,9 @@ Wenn $x$ zu $y$ passt, dann passt auch $y$ zu $x$. Bei "ist im selben Fachsemest
 
 **Aufgabe.** Sei $M$ die Menge der Studierenden und $s(x)$ das Fachsemester von $x$. Zwei Studierende stehen in Relation $R_1$, wenn sie im selben Fachsemester sind, also $x \,R_1\, y \Leftrightarrow s(x) = s(y)$. Untersuche $R_1$ auf Symmetrie.
 
-**Lösung.** Seien $x, y \in M$ beliebig:
+**Lösung.** *Zu zeigen:* Aus $x \,R_1\, y$ folgt $y \,R_1\, x$, am Ende muss also $s(y) = s(x)$ dastehen.
+
+Seien $x, y \in M$ beliebig mit $x \,R_1\, y$:
 
 $$
 x \,R_1\, y \;\Leftrightarrow\; s(x) = s(y) \;\Leftrightarrow\; s(y) = s(x) \;\Leftrightarrow\; y \,R_1\, x .
@@ -83,7 +87,7 @@ Der mittlere Schritt gilt, weil die Gleichheit von Zahlen in beide Richtungen gi
 
 **Aufgabe.** Ist die Relation $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ auf $\mathbb{N} \times \mathbb{N}$ symmetrisch?
 
-**Lösung.** Nein. Gegenbeispiel mit $(a, b) = (1, 2)$ und $(c, d) = (3, 4)$:
+**Lösung.** Nein. *Zu zeigen:* Es gibt Paare mit $(a,b) \,R\, (c,d)$, aber **nicht** $(c,d) \,R\, (a,b)$. Wähle $(a, b) = (1, 2)$ und $(c, d) = (3, 4)$:
 
 $$
 (1,2) \,R\, (3,4) \;\Leftrightarrow\; 1 \cdot 4 \leq 2 \cdot 3 \;\Leftrightarrow\; 4 \leq 6 \quad\text{(wahr)},
@@ -113,7 +117,9 @@ Zwei **verschiedene** Elemente dürfen nie in beide Richtungen zueinander in Rel
 
 **Aufgabe.** Sei $M$ die Menge der Studierenden und $m(x)$ die Matrikelnummer von $x$. Zwei Studierende stehen in Relation $R_2$, wenn sie dieselbe Matrikelnummer haben, also $x \,R_2\, y \Leftrightarrow m(x) = m(y)$. Untersuche $R_2$ auf Antisymmetrie.
 
-**Lösung.** Seien $x, y \in M$ mit $x \,R_2\, y$ und $y \,R_2\, x$:
+**Lösung.** *Zu zeigen:* Aus $x \,R_2\, y$ und $y \,R_2\, x$ folgt $x = y$, am Ende muss also die **Gleichheit der Studierenden** dastehen.
+
+Seien $x, y \in M$ mit $x \,R_2\, y$ und $y \,R_2\, x$:
 
 $$
 x \,R_2\, y \land y \,R_2\, x \;\Leftrightarrow\; m(x) = m(y) \land m(y) = m(x) \;\Rightarrow\; m(x) = m(y) \;\Rightarrow\; x = y .
@@ -123,7 +129,7 @@ Der letzte Schritt gilt, weil Matrikelnummern eindeutig sind: Verschiedene Studi
 
 **Aufgabe.** Ist die Relation $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ auf $\mathbb{N} \times \mathbb{N}$ antisymmetrisch?
 
-**Lösung.** Nein. Gegenbeispiel mit $(a, b) = (1, 2)$ und $(c, d) = (2, 4)$:
+**Lösung.** Nein. *Zu zeigen:* Es gibt zwei **verschiedene** Paare, die in beide Richtungen in Relation stehen. Wähle $(a, b) = (1, 2)$ und $(c, d) = (2, 4)$:
 
 $$
 (1,2) \,R\, (2,4) \;\Leftrightarrow\; 1 \cdot 4 \leq 2 \cdot 2 \;\Leftrightarrow\; 4 \leq 4 \quad\text{(wahr)},
@@ -153,7 +159,9 @@ Ein Umweg über einen Dritten ist nicht nötig. Bei "ist im selben Fachsemester 
 
 **Aufgabe.** Zeige, dass die Relation $(a, b) \,R\, (c, d) \Leftrightarrow a d \leq b c$ auf $\mathbb{N} \times \mathbb{N}$ transitiv ist.
 
-**Lösung.** Seien $(a, b)$, $(c, d)$ und $(e, f)$ beliebig mit $(a, b) \,R\, (c, d)$ und $(c, d) \,R\, (e, f)$. Das bedeutet
+**Lösung.** *Zu zeigen:* Aus $(a, b) \,R\, (c, d)$ und $(c, d) \,R\, (e, f)$ folgt $(a, b) \,R\, (e, f)$. Am Ende muss also $a f \leq b e$ dastehen.
+
+Seien $(a, b)$, $(c, d)$ und $(e, f)$ beliebig mit $(a, b) \,R\, (c, d)$ und $(c, d) \,R\, (e, f)$. Das bedeutet
 
 $$
 a d \leq b c \quad (1) \qquad\text{und}\qquad c f \leq d e \quad (2) .
