@@ -1,8 +1,8 @@
 ---
-title: Schwingungen
+title: Die Hauptsätze
 description: Dummy-Artikel zum Testen des Layouts.
 sidebar:
-  order: 3
+  order: 4
 ---
 
 :::note[Platzhalter]

@@ -1,8 +1,8 @@
 ---
-title: Die Hauptsätze
+title: Atombau und Periodensystem
 description: Dummy-Artikel zum Testen des Layouts.
 sidebar:
-  order: 2
+  order: 1
 ---
 
 :::note[Platzhalter]

@@ -1,5 +1,5 @@
 ---
-title: Wärmelehre
+title: Folgen und Reihen
 description: Dummy-Artikel zum Testen des Layouts.
 sidebar:
   order: 1
