@@ -33,20 +33,13 @@ $$
 
 Für $A = \{1,2,3\}$ gibt es $2^3 = 8$ Teilmengen: $\emptyset$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1,2\}$, $\{1,3\}$, $\{2,3\}$ und $\{1,2,3\}$.
 
-Auch die leere Menge hat eine Potenzmenge. Sie enthält genau eine Teilmenge, nämlich $\emptyset$ selbst:
-
-$$
-\mathcal{P}(\emptyset) = \{\emptyset\}, \qquad
-\mathcal{P}\bigl(\mathcal{P}(\emptyset)\bigr) = \bigl\{\emptyset,\ \{\emptyset\}\bigr\} .
-$$
-
-Das passt zur Formel: $2^0 = 1$ und $2^1 = 2$.
+Auch die leere Menge hat eine Potenzmenge, und man kann sie immer wieder bilden. Das zeigt der Abschnitt [Verschachtelte Potenzmengen](#verschachtelte-potenzmengen) weiter unten.
 
 :::caution[Stolperstelle]
 Unterscheide $\in$ und $\subseteq$. Für $A = \{a, b\}$ gilt $\{a\} \in \mathcal{P}(A)$, denn $\{a\}$ ist eine Teilmenge von $A$. Es gilt aber $a \notin \mathcal{P}(A)$, denn $a$ ist ein Element von $A$ und selbst keine Menge in $\mathcal{P}(A)$. Außerdem liegen immer $\emptyset \in \mathcal{P}(A)$ und $A \in \mathcal{P}(A)$.
 :::
 
-### Warum es genau $2^n$ Teilmengen sind
+### Warum es genau 2ⁿ Teilmengen sind
 
 Nummeriere die Elemente $a_1, \dots, a_n$. Für jedes $a_i$ gibt es zwei Möglichkeiten: Es liegt in der Teilmenge oder nicht. Diese Entscheidungen sind voneinander unabhängig. Also gibt es insgesamt
 
@@ -55,6 +48,92 @@ $$
 $$
 
 verschiedene Kombinationen, und jede liefert genau eine Teilmenge.
+
+## Verschachtelte Potenzmengen
+
+:::note[Definition]
+Die Potenzmenge kann man immer wieder bilden. Ausgehend von der leeren Menge entstehen der Reihe nach
+
+$$
+\mathcal{P}(\emptyset), \qquad
+\mathcal{P}\bigl(\mathcal{P}(\emptyset)\bigr), \qquad
+\mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\emptyset))\bigr), \qquad
+\mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))\bigr) .
+$$
+
+Hat eine Menge $n$ Elemente, dann hat ihre Potenzmenge $2^n$ Elemente. Damit kennt man die Anzahl jedes Schritts schon vor dem Ausschreiben.
+:::
+
+:::tip[In einfachen Worten]
+In jedem Schritt behandelst du die Elemente der letzten Menge als Bausteine und listest alle möglichen Auswahlen daraus auf. Die Anzahl wird nicht verdoppelt, sondern jedes Mal zur Zweierpotenz der vorigen Anzahl. Dadurch wächst sie sehr schnell.
+:::
+
+### Schritt für Schritt
+
+**Schritt 1.** Die leere Menge hat $0$ Elemente, also hat ihre Potenzmenge $2^0 = 1$ Element, nämlich $\emptyset$ selbst:
+
+$$
+\mathcal{P}(\emptyset) = \{\emptyset\} .
+$$
+
+**Schritt 2.** Die Menge aus Schritt 1 hat $1$ Element, also gibt es $2^1 = 2$ Teilmengen:
+
+$$
+\mathcal{P}\bigl(\mathcal{P}(\emptyset)\bigr) = \{\emptyset, \{\emptyset\}\} .
+$$
+
+**Schritt 3.** Die Menge aus Schritt 2 hat $2$ Elemente, also gibt es $2^2 = 4$ Teilmengen:
+
+$$
+\mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\emptyset))\bigr) = \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} .
+$$
+
+**Schritt 4.** Die Menge aus Schritt 3 hat $4$ Elemente, also gibt es $2^4 = 16$ Teilmengen. Zum Aufschreiben geben wir den vier Elementen Kurznamen:
+
+$$
+a = \emptyset, \quad
+b = \{\emptyset\}, \quad
+c = \{\{\emptyset\}\}, \quad
+d = \{\emptyset, \{\emptyset\}\} .
+$$
+
+Dann ist die gesuchte Menge $\mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))\bigr)$ die Menge aller Teilmengen von $\{a, b, c, d\}$. Wir ordnen sie nach der Zahl ihrer Elemente, das hilft, keine zu vergessen. Es sind $1 + 4 + 6 + 4 + 1 = 16$ Stück:
+
+$$
+\begin{aligned}
+\emptyset &= \emptyset \\
+\{a\} &= \{\emptyset\} \\
+\{b\} &= \{\{\emptyset\}\} \\
+\{c\} &= \{\{\{\emptyset\}\}\} \\
+\{d\} &= \{\{\emptyset, \{\emptyset\}\}\} \\
+\{a, b\} &= \{\emptyset, \{\emptyset\}\} \\
+\{a, c\} &= \{\emptyset, \{\{\emptyset\}\}\} \\
+\{a, d\} &= \{\emptyset, \{\emptyset, \{\emptyset\}\}\} \\
+\{b, c\} &= \{\{\emptyset\}, \{\{\emptyset\}\}\} \\
+\{b, d\} &= \{\{\emptyset\}, \{\emptyset, \{\emptyset\}\}\} \\
+\{c, d\} &= \{\{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} \\
+\{a, b, c\} &= \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}\} \\
+\{a, b, d\} &= \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\}\} \\
+\{a, c, d\} &= \{\emptyset, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} \\
+\{b, c, d\} &= \{\{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\} \\
+\{a, b, c, d\} &= \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\}
+\end{aligned}
+$$
+
+Zusammengefasst:
+
+| Menge | Anzahl der Elemente |
+|---|---|
+| $\mathcal{P}(\emptyset)$ | $1 = 2^0$ |
+| $\mathcal{P}(\mathcal{P}(\emptyset))$ | $2 = 2^1$ |
+| $\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))$ | $4 = 2^2$ |
+| $\mathcal{P}(\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))))$ | $16 = 2^4$ |
+
+Der nächste Schritt hätte schon $2^{16} = 65\,536$ Elemente. Aufschreiben kann man das nicht mehr, nur noch zählen.
+
+:::caution[Stolperstelle]
+Achte genau auf die Klammern. $\emptyset$, $\{\emptyset\}$ und $\{\{\emptyset\}\}$ sind drei verschiedene Mengen. $\emptyset$ hat kein Element, $\{\emptyset\}$ hat ein Element (nämlich $\emptyset$), und $\{\{\emptyset\}\}$ hat ein Element (nämlich $\{\emptyset\}$). Ein vergessenes Klammerpaar macht aus einer Menge eine andere.
+:::
 
 ## Potenzmengen und Teilmengen
 
