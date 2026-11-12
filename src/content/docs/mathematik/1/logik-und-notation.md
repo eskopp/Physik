@@ -95,6 +95,47 @@ $$
 
 Das ist wichtig für Widerspruchsbeweise und Gegenbeispiele.
 
+## Tautologie und Kontradiktion
+
+:::note[Definition]
+Eine zusammengesetzte Aussage heißt **Tautologie**, wenn sie für jede Belegung ihrer Teilaussagen mit wahr oder falsch wahr ist. Sie heißt **Kontradiktion**, wenn sie für jede Belegung falsch ist.
+:::
+
+:::tip[In einfachen Worten]
+Eine Tautologie ist zwingend wahr, ganz egal, was die einzelnen Aussagen sind. "Es regnet oder es regnet nicht" stimmt immer. Eine Kontradiktion ist unmöglich: "Es regnet und es regnet nicht" kann nie stimmen. Beides sagt nichts über die Welt, es steckt allein in der Form der Aussage.
+:::
+
+### Beispiel
+
+Für $A \lor \neg A$ und $A \land \neg A$ gilt:
+
+| $A$ | $\neg A$ | $A \lor \neg A$ | $A \land \neg A$ |
+|---|---|---|---|
+| w | f | w | f |
+| f | w | w | f |
+
+In der dritten Spalte steht nur "w", also ist $A \lor \neg A$ eine Tautologie (der **Satz vom ausgeschlossenen Dritten**). In der vierten Spalte steht nur "f", also ist $A \land \neg A$ eine Kontradiktion.
+
+Auch die Kontraposition aus der Stolperstelle oben lässt sich so beweisen. Die Aussage $(A \Rightarrow B) \Leftrightarrow (\neg B \Rightarrow \neg A)$ ist in jeder Zeile wahr:
+
+| $A$ | $B$ | $A \Rightarrow B$ | $\neg B \Rightarrow \neg A$ | $(A \Rightarrow B) \Leftrightarrow (\neg B \Rightarrow \neg A)$ |
+|---|---|---|---|---|
+| w | w | w | w | w |
+| w | f | f | f | w |
+| f | w | w | w | w |
+| f | f | w | w | w |
+
+Zwei Aussagen sind also **gleichwertig**, wenn ihre Äquivalenz eine Tautologie ist. Genauso zeigt man die Regeln von De Morgan:
+
+$$
+\neg(A \land B) \Leftrightarrow (\neg A \lor \neg B), \qquad
+\neg(A \lor B) \Leftrightarrow (\neg A \land \neg B) .
+$$
+
+:::caution[Stolperstelle]
+Eine Tautologie ist nicht dasselbe wie eine wahre Aussage. "Es regnet" kann heute wahr sein, ist aber keine Tautologie, weil es morgen falsch sein kann. Tautologien sind wahr, weil ihre **Form** es erzwingt, nicht wegen der Umstände.
+:::
+
 ## Quantoren
 
 :::note[Definition]
