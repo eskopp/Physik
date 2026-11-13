@@ -13,9 +13,7 @@ aliases:
 > [!NOTE] Definition
 > Die **Potenzmenge** einer Menge $A$ ist die Menge aller Teilmengen von $A$:
 >
-> $$
-> \mathcal{P}(A) = \{M \mid M \subseteq A\} .
-> $$
+> $$ \mathcal{P}(A) = \{M \mid M \subseteq A\} . $$
 >
 > Hat $A$ genau $n$ Elemente, dann hat $\mathcal{P}(A)$ genau $2^n$ Elemente.
 
@@ -52,12 +50,7 @@ verschiedene Kombinationen, und jede liefert genau eine Teilmenge.
 > [!NOTE] Definition
 > Die Potenzmenge kann man immer wieder bilden. Ausgehend von der leeren Menge entstehen der Reihe nach
 >
-> $$
-> \mathcal{P}(\emptyset), \qquad
-> \mathcal{P}\bigl(\mathcal{P}(\emptyset)\bigr), \qquad
-> \mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\emptyset))\bigr), \qquad
-> \mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))\bigr) .
-> $$
+> $$ \mathcal{P}(\emptyset), \qquad \mathcal{P}\bigl(\mathcal{P}(\emptyset)\bigr), \qquad \mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\emptyset))\bigr), \qquad \mathcal{P}\bigl(\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))\bigr) . $$
 >
 > Hat eine Menge $n$ Elemente, dann hat ihre Potenzmenge $2^n$ Elemente. Damit kennt man die Anzahl jedes Schritts schon vor dem Ausschreiben.
 

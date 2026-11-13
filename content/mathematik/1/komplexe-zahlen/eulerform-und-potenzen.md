@@ -12,15 +12,11 @@ linkTitle: "Eulerform, Potenzen"
 > [!NOTE] Definition
 > Für jeden Winkel $\varphi$ (im Bogenmaß) gilt die **Eulersche Formel**
 >
-> $$
-> e^{i\varphi} = \cos\varphi + i\,\sin\varphi .
-> $$
+> $$ e^{i\varphi} = \cos\varphi + i\,\sin\varphi . $$
 >
 > Damit lässt sich die Polarform $z = r\,(\cos\varphi + i\,\sin\varphi)$ kürzer schreiben als **Eulerform**
 >
-> $$
-> z = r\,e^{i\varphi} \qquad\text{mit } r = |z| \text{ und } \varphi = \arg(z) .
-> $$
+> $$ z = r\,e^{i\varphi} \qquad\text{mit } r = |z| \text{ und } \varphi = \arg(z) . $$
 >
 > Ein bekannter Spezialfall ist $e^{i\pi} = \cos\pi + i\,\sin\pi = -1$, also $e^{i\pi} + 1 = 0$.
 
@@ -42,11 +38,7 @@ Beim Multiplizieren **multiplizierst du die Längen und addierst die Winkel**. D
 > [!NOTE] Definition
 > Für jedes $n \in \mathbb{N}$ gilt
 >
-> $$
-> \bigl(r\,e^{i\varphi}\bigr)^n = r^n\,e^{i\,n\varphi}
-> \qquad\text{das heißt}\qquad
-> \bigl(\cos\varphi + i\,\sin\varphi\bigr)^n = \cos(n\varphi) + i\,\sin(n\varphi) .
-> $$
+> $$ \bigl(r\,e^{i\varphi}\bigr)^n = r^n\,e^{i\,n\varphi} \qquad\text{das heißt}\qquad \bigl(\cos\varphi + i\,\sin\varphi\bigr)^n = \cos(n\varphi) + i\,\sin(n\varphi) . $$
 
 > [!TIP] In einfachen Worten
 > Beim Potenzieren wird die Länge **hoch $n$** genommen und der Winkel **mal $n$**. Das ist die $n$-fache Anwendung der Multiplikationsregel: Jede Multiplikation dreht um den Winkel weiter und streckt um $r$.

@@ -136,9 +136,7 @@ $$
 > [!NOTE] Definition
 > Das Zeichen $\forall$ heißt **Allquantor** und bedeutet "für alle". Das Zeichen $\exists$ heißt **Existenzquantor** und bedeutet "es gibt mindestens ein". Für eine Eigenschaft $P(x)$ gilt zum Beispiel
 >
-> $$
-> \forall x \in \mathbb{R}:\; x^2 \geq 0 \qquad\text{und}\qquad \exists x \in \mathbb{R}:\; x^2 = 4 .
-> $$
+> $$ \forall x \in \mathbb{R}:\; x^2 \geq 0 \qquad\text{und}\qquad \exists x \in \mathbb{R}:\; x^2 = 4 . $$
 
 > [!TIP] In einfachen Worten
 > $\forall$ ist ein Versprechen für **jedes** Element. Ein einziger Fall, in dem es nicht stimmt, reicht, um es zu widerlegen. $\exists$ ist eine Suche: Ein einziges Beispiel genügt, um es zu beweisen.

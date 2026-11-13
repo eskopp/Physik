@@ -16,9 +16,7 @@ aliases:
 >
 > Das **kartesische Produkt** zweier Mengen $A$ und $B$ ist die Menge aller geordneten Paare:
 >
-> $$
-> A \times B = \{(a, b) \mid a \in A \land b \in B\} .
-> $$
+> $$ A \times B = \{(a, b) \mid a \in A \land b \in B\} . $$
 >
 > Hat $A$ genau $m$ und $B$ genau $n$ Elemente, dann hat $A \times B$ genau $m \cdot n$ Elemente.
 
@@ -40,9 +38,7 @@ Das sind $2 \cdot 2 = 4$ Paare. Das Paar $(1, x)$ ist etwas anderes als $(x, 1)$
 > [!NOTE] Definition
 > Eine **Relation** von $A$ nach $B$ ist eine Teilmenge des kartesischen Produkts:
 >
-> $$
-> R \subseteq A \times B .
-> $$
+> $$ R \subseteq A \times B . $$
 >
 > Statt $(a, b) \in R$ schreibt man auch $a \,R\, b$ und liest "$a$ steht in Relation zu $b$". Eine **Relation auf $A$** ist eine Teilmenge von $A \times A$.
 

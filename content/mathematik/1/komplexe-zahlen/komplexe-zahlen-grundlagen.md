@@ -14,15 +14,11 @@ aliases:
 > [!NOTE] Definition
 > Die **imaginäre Einheit** $i$ ist die Zahl mit
 >
-> $$
-> i^2 = -1 .
-> $$
+> $$ i^2 = -1 . $$
 >
 > Eine **komplexe Zahl** hat die Form
 >
-> $$
-> z = a + b\,i \qquad\text{mit } a, b \in \mathbb{R} .
-> $$
+> $$ z = a + b\,i \qquad\text{mit } a, b \in \mathbb{R} . $$
 >
 > Dabei heißt $a = \operatorname{Re}(z)$ der **Realteil** und $b = \operatorname{Im}(z)$ der **Imaginärteil**. Beide sind reelle Zahlen. Die Menge aller komplexen Zahlen heißt $\mathbb{C}$.
 
@@ -40,20 +36,13 @@ $$
 > [!NOTE] Definition
 > Für $z_1 = a + b\,i$ und $z_2 = c + d\,i$ gilt
 >
-> $$
-> z_1 + z_2 = (a + c) + (b + d)\,i, \qquad
-> z_1 - z_2 = (a - c) + (b - d)\,i,
-> $$
+> $$ z_1 + z_2 = (a + c) + (b + d)\,i, \qquad z_1 - z_2 = (a - c) + (b - d)\,i, $$
 >
-> $$
-> z_1 \cdot z_2 = (ac - bd) + (ad + bc)\,i .
-> $$
+> $$ z_1 \cdot z_2 = (ac - bd) + (ad + bc)\,i . $$
 >
 > Die **konjugiert komplexe Zahl** zu $z = a + b\,i$ ist $\bar z = a - b\,i$. Für die Division erweitert man mit dem Konjugierten des Nenners:
 >
-> $$
-> \frac{z_1}{z_2} = \frac{z_1 \cdot \bar z_2}{z_2 \cdot \bar z_2} = \frac{z_1 \cdot \bar z_2}{c^2 + d^2} .
-> $$
+> $$ \frac{z_1}{z_2} = \frac{z_1 \cdot \bar z_2}{z_2 \cdot \bar z_2} = \frac{z_1 \cdot \bar z_2}{c^2 + d^2} . $$
 
 > [!TIP] In einfachen Worten
 > Addieren und Subtrahieren geht getrennt für Real- und Imaginärteil. Beim Multiplizieren multiplizierst du aus wie bei Klammern und ersetzt $i^2$ durch $-1$. Beim Dividieren machst du den Nenner reell: Du erweiterst mit seinem Konjugierten, denn $(c + d\,i)(c - d\,i) = c^2 + d^2$ ist eine gewöhnliche Zahl.

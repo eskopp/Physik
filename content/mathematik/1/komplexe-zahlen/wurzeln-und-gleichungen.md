@@ -12,9 +12,7 @@ linkTitle: "Wurzeln, Gleichungen"
 > [!NOTE] Definition
 > Sei $w = \rho\,e^{i\theta} \neq 0$ und $n \in \mathbb{N}$. Die Gleichung $z^n = w$ hat genau $n$ Lösungen:
 >
-> $$
-> z_k = \sqrt[n]{\rho}\;e^{\,i\,\frac{\theta + 2\pi k}{n}}, \qquad k = 0, 1, \dots, n - 1 .
-> $$
+> $$ z_k = \sqrt[n]{\rho}\;e^{\,i\,\frac{\theta + 2\pi k}{n}}, \qquad k = 0, 1, \dots, n - 1 . $$
 >
 > Herleitung: Mit $z = r\,e^{i\varphi}$ lautet die Gleichung $r^n e^{i\,n\varphi} = \rho\,e^{i\theta}$. Daraus folgt $r^n = \rho$ und $n\varphi = \theta + 2\pi k$ für eine ganze Zahl $k$, denn Winkel sind nur bis auf volle Umdrehungen festgelegt.
 
@@ -164,9 +162,7 @@ $$
 > [!NOTE] Definition
 > Die Gleichung $a z^2 + b z + c = 0$ mit $a \neq 0$ hat die Lösungen
 >
-> $$
-> z_{1,2} = \frac{-b \pm w}{2a}, \qquad\text{wobei } w^2 = D := b^2 - 4ac .
-> $$
+> $$ z_{1,2} = \frac{-b \pm w}{2a}, \qquad\text{wobei } w^2 = D := b^2 - 4ac . $$
 >
 > Die Zahl $w$ ist **eine** (komplexe) Wurzel aus der Diskriminante $D$.
 

@@ -16,9 +16,7 @@ aliases:
 >
 > Der **Betrag** von $z$ ist der Abstand des Punkts vom Ursprung. Nach dem Satz des Pythagoras gilt
 >
-> $$
-> |z| = \sqrt{a^2 + b^2} .
-> $$
+> $$ |z| = \sqrt{a^2 + b^2} . $$
 
 > [!TIP] In einfachen Worten
 > Der Betrag sagt, wie weit die Zahl vom Nullpunkt entfernt ist, ganz gleich in welcher Richtung. Er ist wie die Länge eines Pfeils vom Ursprung zum Punkt.
@@ -52,15 +50,11 @@ Im zweiten Quadranten rechnet man $\varphi = \arctan(b/a) + 180^\circ$, im dritt
 > [!NOTE] Definition
 > Mit Betrag $r = |z|$ und Winkel $\varphi$ gilt die **Polarform** (auch trigonometrische Darstellung)
 >
-> $$
-> z = r\,(\cos\varphi + i\,\sin\varphi) .
-> $$
+> $$ z = r\,(\cos\varphi + i\,\sin\varphi) . $$
 >
 > Zwischen den Darstellungen gilt:
 >
-> $$
-> a = r\cos\varphi, \qquad b = r\sin\varphi, \qquad r = \sqrt{a^2 + b^2} .
-> $$
+> $$ a = r\cos\varphi, \qquad b = r\sin\varphi, \qquad r = \sqrt{a^2 + b^2} . $$
 
 > [!TIP] In einfachen Worten
 > Die Form $a + b\,i$ sagt: so weit nach rechts, so weit nach oben. Die Polarform sagt: so weit weg vom Ursprung, in diese Richtung. Beides beschreibt denselben Punkt.

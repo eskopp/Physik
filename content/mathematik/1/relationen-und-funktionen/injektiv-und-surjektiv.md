@@ -24,9 +24,7 @@ Ob eine Funktion injektiv oder surjektiv ist, hängt vom **Definitionsbereich un
 > [!NOTE] Definition
 > $f: A \to B$ heißt **injektiv**, wenn verschiedene Eingaben verschiedene Ausgaben haben:
 >
-> $$
-> \forall x_1, x_2 \in A:\; f(x_1) = f(x_2) \Rightarrow x_1 = x_2 .
-> $$
+> $$ \forall x_1, x_2 \in A:\; f(x_1) = f(x_2) \Rightarrow x_1 = x_2 . $$
 >
 > Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists x_1, x_2 \in A:\; x_1 \neq x_2 \land f(x_1) = f(x_2)$.
 
@@ -104,9 +102,7 @@ Da $m = 0$ erlaubt ist, ist $f(x) = mx + n$ im Allgemeinen **nicht** injektiv. S
 > [!NOTE] Definition
 > $f: A \to B$ heißt **surjektiv**, wenn jedes Element des Zielbereichs getroffen wird:
 >
-> $$
-> \forall y \in B\ \exists x \in A:\; f(x) = y .
-> $$
+> $$ \forall y \in B\ \exists x \in A:\; f(x) = y . $$
 >
 > Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists y \in B:\; \neg\,\exists x \in A:\; f(x) = y$.
 

@@ -33,9 +33,7 @@ Sie vergleicht Paare nach dem Verhältnis $a/b$ gegen $c/d$. Mit $a/b \leq c/d$ 
 > [!NOTE] Definition
 > $R$ heißt **reflexiv**, wenn jedes Element zu sich selbst in Relation steht:
 >
-> $$
-> \forall x \in A:\; x \,R\, x .
-> $$
+> $$ \forall x \in A:\; x \,R\, x . $$
 >
 > Widerlegt wird die Eigenschaft durch ein einziges Element: $\exists x \in A:\; \neg(x \,R\, x)$.
 
@@ -61,9 +59,7 @@ Der zweite Schritt ist das Kommutativgesetz $b \cdot a = a \cdot b$. Die letzte 
 > [!NOTE] Definition
 > $R$ heißt **symmetrisch**, wenn die Relation immer in beide Richtungen gilt:
 >
-> $$
-> \forall x, y \in A:\; x \,R\, y \Rightarrow y \,R\, x .
-> $$
+> $$ \forall x, y \in A:\; x \,R\, y \Rightarrow y \,R\, x . $$
 >
 > Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists x, y \in A:\; x \,R\, y \land \neg(y \,R\, x)$.
 
@@ -101,9 +97,7 @@ Es gilt $(1,2) \,R\, (3,4)$, aber nicht $(3,4) \,R\, (1,2)$. Damit ist $R$ **nic
 > [!NOTE] Definition
 > $R$ heißt **antisymmetrisch**, wenn aus Relation in beide Richtungen schon Gleichheit folgt:
 >
-> $$
-> \forall x, y \in A:\; (x \,R\, y \land y \,R\, x) \Rightarrow x = y .
-> $$
+> $$ \forall x, y \in A:\; (x \,R\, y \land y \,R\, x) \Rightarrow x = y . $$
 >
 > Widerlegt wird die Eigenschaft durch ein einziges Paar: $\exists x, y \in A:\; x \,R\, y \land y \,R\, x \land x \neq y$.
 
@@ -141,9 +135,7 @@ Beide Richtungen gelten, aber $(1,2) \neq (2,4)$. Damit ist $R$ **nicht** antisy
 > [!NOTE] Definition
 > $R$ heißt **transitiv**, wenn sich Relationen verketten lassen:
 >
-> $$
-> \forall x, y, z \in A:\; (x \,R\, y \land y \,R\, z) \Rightarrow x \,R\, z .
-> $$
+> $$ \forall x, y, z \in A:\; (x \,R\, y \land y \,R\, z) \Rightarrow x \,R\, z . $$
 >
 > Widerlegt wird die Eigenschaft durch eine einzige Kette: $\exists x, y, z \in A:\; x \,R\, y \land y \,R\, z \land \neg(x \,R\, z)$.
 

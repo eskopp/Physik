@@ -14,21 +14,15 @@ aliases:
 > [!NOTE] Definition
 > Eine **Menge** fasst verschiedene Objekte, die **Elemente**, zusammen. Mit $x \in A$ schreibt man "$x$ ist Element von $A$" und mit $x \notin A$ das Gegenteil. Man gibt Mengen auf zwei Arten an:
 >
-> $$
-> A = \{1, 2, 3\} \qquad\text{oder}\qquad A = \{x \in \mathbb{N} \mid x \leq 3 \text{ und } x \geq 1\} .
-> $$
+> $$ A = \{1, 2, 3\} \qquad\text{oder}\qquad A = \{x \in \mathbb{N} \mid x \leq 3 \text{ und } x \geq 1\} . $$
 >
 > Die **leere Menge** $\emptyset$ hat kein Element. Eine Menge $A$ ist **Teilmenge** von $B$, geschrieben $A \subseteq B$, wenn jedes Element von $A$ auch in $B$ liegt:
 >
-> $$
-> A \subseteq B \;\Leftrightarrow\; \forall x:\; (x \in A \Rightarrow x \in B) .
-> $$
+> $$ A \subseteq B \;\Leftrightarrow\; \forall x:\; (x \in A \Rightarrow x \in B) . $$
 >
 > Gilt zusätzlich $A \neq B$, heißt $A$ **echte Teilmenge**, geschrieben $A \subsetneq B$. Zwei Mengen sind **gleich**, wenn sie sich gegenseitig enthalten:
 >
-> $$
-> A = B \;\Leftrightarrow\; A \subseteq B \,\land\, B \subseteq A .
-> $$
+> $$ A = B \;\Leftrightarrow\; A \subseteq B \,\land\, B \subseteq A . $$
 
 > [!TIP] In einfachen Worten
 > Stell dir eine Tüte mit Murmeln vor. Eine Menge sagt nur, welche Sorten drin sind. $\{1, 2, 2, 3\}$ und $\{3, 1, 2\}$ sind dieselbe Menge. Eine Teilmenge ist eine Auswahl aus der Tüte, auch die leere Auswahl und die ganze Tüte zählen dazu.
@@ -45,11 +39,7 @@ Für $\emptyset \subseteq A$ muss die Aussage "$x \in \emptyset \Rightarrow x \i
 > [!NOTE] Definition
 > Für Mengen $A$ und $B$ sind
 >
-> $$
-> A \cup B = \{x \mid x \in A \lor x \in B\}, \qquad
-> A \cap B = \{x \mid x \in A \land x \in B\}, \qquad
-> A \setminus B = \{x \mid x \in A \land x \notin B\}
-> $$
+> $$ A \cup B = \{x \mid x \in A \lor x \in B\}, \qquad A \cap B = \{x \mid x \in A \land x \in B\}, \qquad A \setminus B = \{x \mid x \in A \land x \notin B\} $$
 >
 > die **Vereinigung**, der **Schnitt** und die **Differenz**.
 

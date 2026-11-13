@@ -12,9 +12,7 @@ linkTitle: "Verkettung"
 > [!NOTE] Definition
 > Seien $f: A \to B$ und $g: B \to C$ Funktionen. Der Zielbereich von $f$ ist also der Definitionsbereich von $g$. Die **Verkettung** (auch **Komposition**) von $g$ nach $f$ ist die Funktion
 >
-> $$
-> g \circ f: A \to C, \qquad (g \circ f)(x) = g\bigl(f(x)\bigr) .
-> $$
+> $$ g \circ f: A \to C, \qquad (g \circ f)(x) = g\bigl(f(x)\bigr) . $$
 >
 > Man liest "$g$ nach $f$" oder "$g$ verkettet mit $f$".
 
