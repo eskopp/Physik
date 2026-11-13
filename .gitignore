@@ -15,8 +15,8 @@
 __pycache__/
 .claude/
 out/
-node_modules/
-dist/
-.astro/
+/public/
+/resources/
+.hugo_build.lock
 *.claude
 *Claude*
