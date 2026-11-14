@@ -1,0 +1,95 @@
+<div class="dichte" data-dichte>
+  <div class="dichte-controls">
+    <label>
+      <span>Stoff (Dichte ρ)</span>
+      <select data-rho>
+        <option value="2.70">Aluminium, ca. 2,70 g/cm³</option>
+        <option value="7.85">Stahl, ca. 7,85 g/cm³</option>
+        <option value="8.96">Kupfer, ca. 8,96 g/cm³</option>
+        <option value="11.34">Blei, ca. 11,34 g/cm³</option>
+      </select>
+    </label>
+    <label>
+      <span>Masse in Luft m<sub>K</sub>: <output data-out-m></output></span>
+      <input type="range" data-m min="5" max="100" step="1" value="30" />
+    </label>
+    <label>
+      <span>Dichte des Wassers ρ<sub>W</sub>: <output data-out-w></output></span>
+      <input type="range" data-w min="0.990" max="1.000" step="0.001" value="0.998" />
+    </label>
+  </div>
+
+  <div class="dichte-bar" role="img" aria-label="Anteil der Masse, der unter Wasser scheinbar fehlt">
+    <div class="dichte-bar-rest" data-bar-rest></div>
+    <div class="dichte-bar-lost" data-bar-lost></div>
+  </div>
+  <p class="dichte-legend">
+    <span class="dichte-key dichte-key-rest"></span> scheinbare Masse unter Wasser
+    <span class="dichte-key dichte-key-lost"></span> Masse des verdrängten Wassers
+  </p>
+
+  <div class="dichte-results">
+    <p>Volumen des Körpers V: <strong data-v></strong></p>
+    <p>Verdrängtes Wasser m<sub>W</sub>: <strong data-mw></strong></p>
+    <p>Scheinbare Masse unter Wasser m<sub>K</sub>*: <strong data-ms></strong></p>
+    <p>Dichte nach der Auftriebsformel ρ<sub>K</sub>: <strong data-rk></strong></p>
+  </div>
+</div>
+
+<style>
+  .dichte {
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 0.9rem;
+    padding: 1.1rem;
+    margin: 1.5rem 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .dichte-controls { display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  .dichte label { display: grid; gap: 0.25rem; font-size: 0.9rem; }
+  .dichte input[type='range'], .dichte select { width: 100%; }
+  .dichte select { padding: 0.3rem; border: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0.4rem; background: transparent; color: inherit; }
+  .dichte-bar { display: flex; height: 1.6rem; border-radius: 0.5rem; overflow: hidden; border: 1px solid rgba(128, 128, 128, 0.5); }
+  .dichte-bar-rest { background: #2563eb; }
+  .dichte-bar-lost { background: #f59e0b; }
+  .dichte-legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: center; font-size: 0.85rem; margin: 0; }
+  .dichte-key { display: inline-block; width: 0.9rem; height: 0.9rem; border-radius: 0.2rem; margin-right: 0.3rem; vertical-align: middle; }
+  .dichte-key-rest { background: #2563eb; }
+  .dichte-key-lost { background: #f59e0b; }
+  .dichte-results { display: grid; gap: 0.2rem; }
+  .dichte-results p { margin: 0; }
+</style>
+
+<script>
+  (function () {
+    var roots = document.querySelectorAll('[data-dichte]');
+    roots.forEach(function (root) {
+      if (root.dataset.ready) return;
+      root.dataset.ready = '1';
+      var q = function (s) { return root.querySelector(s); };
+      var fmt = function (x, d) { return x.toLocaleString('de-DE', { minimumFractionDigits: d, maximumFractionDigits: d }); };
+      var rho = q('[data-rho]'), m = q('[data-m]'), w = q('[data-w]');
+
+      function update() {
+        var rk = parseFloat(rho.value);
+        var mk = parseFloat(m.value);
+        var rw = parseFloat(w.value);
+        var v = mk / rk;
+        var mw = rw * v;
+        var ms = mk - mw;
+        var back = mk / (mk - ms) * rw;
+        q('[data-out-m]').textContent = fmt(mk, 0) + ' g';
+        q('[data-out-w]').textContent = fmt(rw, 3) + ' g/cm³';
+        q('[data-v]').textContent = fmt(v, 2) + ' cm³';
+        q('[data-mw]').textContent = fmt(mw, 2) + ' g';
+        q('[data-ms]').textContent = fmt(ms, 2) + ' g';
+        q('[data-rk]').textContent = fmt(back, 2) + ' g/cm³';
+        q('[data-bar-rest]').style.width = (ms / mk * 100) + '%';
+        q('[data-bar-lost]').style.width = (mw / mk * 100) + '%';
+      }
+
+      [rho, m, w].forEach(function (el) { el.addEventListener('input', update); });
+      update();
+    });
+  })();
+</script>
