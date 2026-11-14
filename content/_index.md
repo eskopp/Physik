@@ -15,4 +15,4 @@ Pro Modul gibt es einen eigenen Bereich in der Seitenleiste. Die Suche oben find
 
 ## Bereiche
 
-{{< unterseiten >}}
+{{< unterseiten cols="3" >}}
