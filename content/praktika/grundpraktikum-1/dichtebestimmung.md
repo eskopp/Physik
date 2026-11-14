@@ -159,6 +159,74 @@ Alle Formeln brauchen $\rho_W$. Wasser hat bei $20\,^\circ\mathrm{C}$ eine Dicht
 > [!CAUTION] Stolperstelle
 > Die Auftriebsformel gilt, wenn man den Auftrieb in Luft vernachlässigt. Luft hat nur etwa $0{,}0012\,\mathrm{g/cm^3}$. Das ist rund tausendmal weniger als Wasser und bei einer normalen Waage nicht zu bemerken.
 
+## Alle Methoden an einem Zahlenbeispiel
+
+Hier rechnen wir alle Methoden mit demselben Körper durch. So sieht man, dass sie dasselbe Ergebnis liefern. Alle Zahlen sind frei gewählt und keine Messwerte. Als Körper nehmen wir einen Aluminiumzylinder mit dem Durchmesser $d = 2{,}000\,\mathrm{cm}$ und der Höhe $h = 4{,}00\,\mathrm{cm}$. Für Wasser setzen wir $\rho_W = 0{,}9982\,\mathrm{g/cm^3}$ ein, den Wert bei $20\,^\circ\mathrm{C}$.
+
+### Volumen aus den Maßen
+
+$$
+V = \frac{\pi \cdot d^2}{4} \cdot h = \frac{\pi \cdot (2{,}000\,\mathrm{cm})^2}{4} \cdot 4{,}00\,\mathrm{cm} = 12{,}57\,\mathrm{cm^3}
+$$
+
+An der Waage lesen wir die Masse $m_K = 33{,}9\,\mathrm{g}$ ab. Damit ist
+
+$$
+\rho_K = \frac{m_K}{V} = \frac{33{,}9\,\mathrm{g}}{12{,}57\,\mathrm{cm^3}} = 2{,}70\,\mathrm{g/cm^3}
+$$
+
+Das ist unsere Vergleichsgröße für die beiden folgenden Methoden.
+
+### Auftriebsmethode
+
+Unter Wasser zeigt die Waage die scheinbare Masse $m_K^* = 21{,}4\,\mathrm{g}$. Der Unterschied zur Wägung in Luft ist
+
+$$
+m_K - m_K^* = 33{,}9\,\mathrm{g} - 21{,}4\,\mathrm{g} = 12{,}5\,\mathrm{g} .
+$$
+
+So viel wiegt das verdrängte Wasser. Daraus folgt das Volumen und die Dichte:
+
+$$
+V = \frac{12{,}5\,\mathrm{g}}{0{,}9982\,\mathrm{g/cm^3}} = 12{,}52\,\mathrm{cm^3}
+\qquad\text{und}\qquad
+\rho_K = \frac{33{,}9\,\mathrm{g}}{12{,}5\,\mathrm{g}} \cdot 0{,}9982\,\mathrm{g/cm^3} = 2{,}71\,\mathrm{g/cm^3} .
+$$
+
+### Pyknometer
+
+Das Pyknometer mit Wasser wiegt $m_1 = 52{,}3\,\mathrm{g}$. Mit Wasser und eingelegtem Körper zeigt die Waage $m_2 = 73{,}7\,\mathrm{g}$. Die Masse des übergelaufenen Wassers ist
+
+$$
+m_W = m_1 + m_K - m_2 = 52{,}3\,\mathrm{g} + 33{,}9\,\mathrm{g} - 73{,}7\,\mathrm{g} = 12{,}5\,\mathrm{g} .
+$$
+
+Das ist derselbe Wert wie beim Auftrieb, denn beide Methoden messen das verdrängte Wasser. Also ergeben sich auch dasselbe Volumen und dieselbe Dichte:
+
+$$
+\rho_K = \frac{33{,}9\,\mathrm{g}}{12{,}5\,\mathrm{g}} \cdot 0{,}9982\,\mathrm{g/cm^3} = 2{,}71\,\mathrm{g/cm^3} .
+$$
+
+### Dichte einer Flüssigkeit
+
+Jetzt tauchen wir denselben Zylinder in Ethanol. Sein Volumen kennen wir aus den Maßen: $V_K = 12{,}57\,\mathrm{cm^3}$. Die scheinbare Masse unter Ethanol ist $m_K^* = 24{,}0\,\mathrm{g}$. Dann gilt
+
+$$
+\rho_\mathrm{Fl} = \frac{m_K - m_K^*}{V_K} = \frac{33{,}9\,\mathrm{g} - 24{,}0\,\mathrm{g}}{12{,}57\,\mathrm{cm^3}} = 0{,}79\,\mathrm{g/cm^3} .
+$$
+
+Das passt zum bekannten Wert für Ethanol von etwa $0{,}79\,\mathrm{g/cm^3}$.
+
+### Vergleich
+
+| Methode | Volumen | Dichte des Körpers |
+|---|---|---|
+| Aus den Maßen | $12{,}57\,\mathrm{cm^3}$ | $2{,}70\,\mathrm{g/cm^3}$ |
+| Auftrieb | $12{,}52\,\mathrm{cm^3}$ | $2{,}71\,\mathrm{g/cm^3}$ |
+| Pyknometer | $12{,}52\,\mathrm{cm^3}$ | $2{,}71\,\mathrm{g/cm^3}$ |
+
+Alle drei Werte liegen sehr nah beieinander und passen zu Aluminium mit etwa $2{,}70\,\mathrm{g/cm^3}$. Die kleinen Unterschiede kommen von der begrenzten Ablesegenauigkeit der Waage, die hier mit $0{,}1\,\mathrm{g}$ angenommen ist. Bei Auftrieb und Pyknometer steckt sie in einer Differenz von Wägungen, deshalb wirkt sie sich dort etwas stärker aus.
+
 ## Ausprobieren
 
 Wähle einen Stoff und eine Masse. Das Widget rechnet das Volumen des Körpers, die scheinbare Masse unter Wasser und die Dichte nach der Auftriebsformel zurück. Die Dichten der Stoffe sind gerundete Richtwerte, die Massen sind frei gewählt. Es sind keine Messwerte.
