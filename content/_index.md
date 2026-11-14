@@ -12,3 +12,7 @@ Diese Seite sammelt meine Unterlagen zum Studium der Technischen Physik. Sie wä
 ## Aufbau
 
 Pro Modul gibt es einen eigenen Bereich in der Seitenleiste. Die Suche oben findet Begriffe und Formeln über alle Seiten.
+
+## Bereiche
+
+{{< unterseiten >}}

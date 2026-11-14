@@ -1,0 +1,17 @@
+{{- $pages := .Page.Pages.ByWeight -}}
+{{- if $pages -}}
+<ul class="unterseiten">
+  {{- range $pages }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- with .Description }}<span class="unterseiten-text">: {{ . }}</span>{{ end }}
+  </li>
+  {{- end }}
+</ul>
+<style>
+  .unterseiten { margin: 1rem 0; padding-left: 1.2rem; list-style: disc; }
+  .unterseiten li { margin: 0.35rem 0; }
+  .unterseiten a { font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
+  .unterseiten-text { opacity: 0.8; }
+</style>
+{{- end -}}
