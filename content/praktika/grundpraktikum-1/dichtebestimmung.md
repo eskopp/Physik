@@ -6,6 +6,8 @@ weight: 1
 
 *In einem Satz: Die Dichte sagt, wie viel Masse in einem Volumen steckt, und wenn man das Volumen nicht messen kann, lässt es sich über das verdrängte Wasser bestimmen.*
 
+![Der Arbeitsplatz im Praktikum: links die Mohr-Westphalsche Waage, rechts die Balkenwaage, dazwischen ein Messzylinder und Flaschen mit destilliertem Wasser.](/images/dichtebestimmung/arbeitsplatz.jpg)
+
 ## Dichte
 
 > [!NOTE] Definition
@@ -46,6 +48,10 @@ Die Masse liest man an einer Waage ab. Schwieriger ist das Volumen. Bei einfache
 > [!TIP] In einfachen Worten
 > Beim Quader ist das Volumen Länge mal Breite mal Höhe. Beim Zylinder ist es die Kreisfläche am Boden mal die Höhe.
 
+Im Praktikum liegen dafür verschiedene Körper bereit: ein Quader, ein Zylinder und ein Topf mit einem Mittelzylinder. Dazu kommt ein Granulat aus vielen kleinen Metallkörnern.
+
+![Körper für die Dichtebestimmung: ein blauer Quader, ein Topf mit Mittelzylinder, ein Metallstab und ein Becherglas mit Metallgranulat.](/images/dichtebestimmung/koerper_labor.jpg)
+
 Bei unregelmäßigen Körpern geht das nicht. Dann nutzt man aus, dass ein Körper im Wasser Platz wegnimmt. Das verdrängte Wasser hat genau das Volumen des Körpers, und sein Gewicht lässt sich wiegen. Dafür gibt es zwei Wege.
 
 ## Auftriebsmethode
@@ -63,6 +69,23 @@ Bei unregelmäßigen Körpern geht das nicht. Dann nutzt man aus, dass ein Körp
 
 > [!TIP] In einfachen Worten
 > Im Wasser fühlt sich ein Körper leichter an. Die Waage zeigt unter Wasser weniger an als in Luft. Der Unterschied ist genau die Masse des Wassers, das der Körper zur Seite geschoben hat. Daraus kennt man das Volumen. Mit der Masse aus der Luftwägung hat man dann alles für die Dichte.
+
+### Woher kommt der Auftrieb?
+
+Der Auftrieb entsteht, weil der Druck im Wasser mit der Tiefe zunimmt. Der **Schweredruck** in der Tiefe $h$ ist
+
+$$ p = \rho_\mathrm{Fl} \cdot g \cdot h . $$
+
+Er kommt vom Gewicht der Flüssigkeit darüber. Dazu kommt der Luftdruck an der Oberfläche, der überall gleich wirkt. Ein eingetauchter Körper hat seine Oberseite in der Tiefe $h_1$ und seine Unterseite in der Tiefe $h_2$. Unten ist der Druck größer als oben, also $p_2 > p_1$. Die Drücke auf die Seitenflächen heben sich auf. Mit der Grundfläche $A$ und dem Volumen $V = (h_2 - h_1) \cdot A$ des Körpers bleibt eine Kraft nach oben:
+
+$$ F_A = (p_2 - p_1) \cdot A = \rho_\mathrm{Fl} \cdot g \cdot (h_2 - h_1) \cdot A = \rho_\mathrm{Fl} \cdot g \cdot V . $$
+
+Das ist genau die Gewichtskraft der verdrängten Flüssigkeit.
+
+![Kräfte auf einen Körper im Wasser: Nach unten wirken die Druckkraft von oben und die Gewichtskraft, nach oben die größere Druckkraft von unten. Der Überschuss ist der Auftrieb.](/images/dichtebestimmung/auftrieb_kraefte.png)
+
+> [!TIP] In einfachen Worten
+> Unten drückt das Wasser stärker gegen den Körper als oben. Dieser Unterschied schiebt den Körper nach oben. Je mehr Wasser er verdrängt, desto größer ist die Kraft.
 
 ### Herleitung (selbst durchgerechnet)
 
@@ -84,6 +107,12 @@ $$
 \rho_K = \frac{m_K}{\dfrac{m_K - m_K^*}{\rho_W}} = \frac{m_K}{m_K - m_K^*} \cdot \rho_W .
 $$
 
+### Der Aufbau
+
+Im Praktikum wiegt man auf einer Balkenwaage. Der Körper hängt an einem dünnen Faden am Waagbalken und taucht ganz in ein Becherglas mit Wasser. Gewogen wird einmal ohne und einmal mit dem Wasser darunter.
+
+![Balkenwaage für die Auftriebsmethode: Der Körper hängt am Waagbalken im Wasser eines Becherglases, rechts sitzen die Skalen mit den Reitern.](/images/dichtebestimmung/balkenwaage_auftrieb.png)
+
 ### Beispiel
 
 Ein Körper hat in Luft die Masse $m_K = 21{,}6\,\mathrm{g}$ und unter Wasser die scheinbare Masse $m_K^* = 13{,}6\,\mathrm{g}$. Mit $\rho_W = 1{,}00\,\mathrm{g/cm^3}$ ist
@@ -100,12 +129,18 @@ Das verdrängte Wasser wiegt $8{,}0\,\mathrm{g}$, das Volumen des Körpers ist a
 ## Pyknometer
 
 > [!NOTE] Definition
-> Ein **Pyknometer** ist ein Gefäß mit einem festen, genau gefüllten Volumen. Man wiegt es dreimal: mit Wasser gefüllt ($m_1$), den Körper allein ($m_K$) und das Pyknometer mit Wasser und eingelegtem Körper ($m_2$). Die Dichte des Körpers ist
+> Ein **Pyknometer** ist ein Gefäß mit einem festen, genau gefüllten Volumen. Dazu gehört ein Stopfen mit einer feinen Kapillare. So steht das Wasser bei jeder Wägung bis zum oberen Rand der Kapillare. Man wiegt es dreimal: mit Wasser gefüllt ($m_1$), den Körper allein ($m_K$) und das Pyknometer mit Wasser und eingelegtem Körper ($m_2$). Die Dichte des Körpers ist
 >
 > $$ \rho_K = \frac{m_K}{m_1 + m_K - m_2} \cdot \rho_W . $$
 
 > [!TIP] In einfachen Worten
 > Du legst den Körper in das randvolle Gefäß. Er schiebt Wasser heraus, es läuft über. Danach ist das Gefäß leichter, als es sein müsste. Dieser Unterschied ist das übergelaufene Wasser. Es hat das Volumen des Körpers.
+
+### Der Aufbau
+
+Setzt man den Stopfen auf, steigt das überschüssige Wasser in der Kapillare hoch und läuft über. Das Volumen im Gefäß ist dann bei jeder Wägung dasselbe. Das ist der Grund, warum das Gefäß mit Stopfen gewogen wird.
+
+![Pyknometer mit Stopfen und Kapillare, mit eingelegtem Körper auf der Waagschale einer Balkenwaage.](/images/dichtebestimmung/pyknometer_stopfen.png)
 
 ### Herleitung (selbst durchgerechnet)
 
@@ -140,7 +175,7 @@ $$
 Das ist dasselbe Ergebnis wie bei der Auftriebsmethode. Die Zahlen sind frei gewählt und keine Messwerte.
 
 > [!CAUTION] Stolperstelle
-> Das Pyknometer muss vor dem Wiegen außen trocken sein, sonst zählt anhaftendes Wasser mit. Auch hier verfälschen Luftblasen im Gefäß das Ergebnis.
+> Das Pyknometer muss vor dem Wiegen außen trocken sein, sonst zählt anhaftendes Wasser mit. Auch hier verfälschen Luftblasen im Gefäß das Ergebnis. Das Pyknometer gehört mit aufgesetztem Stopfen auf die Waage, bis zum oberen Rand der Kapillare gefüllt. Ohne Stopfen steht das Wasser nicht immer gleich hoch, und das Volumen ist nicht mehr festgelegt.
 
 ## Flüssigkeiten messen
 
@@ -151,6 +186,10 @@ Das ist dasselbe Ergebnis wie bei der Auftriebsmethode. Die Zahlen sind frei gew
 
 > [!TIP] In einfachen Worten
 > Es ist dieselbe Rechnung mit vertauschten Rollen. Jetzt ist der Körper bekannt und die Flüssigkeit gesucht. Auf diesem Prinzip beruht die Mohr-Westphalsche Waage.
+
+Bei der **Mohr-Westphalschen Waage** hängt an einem Ende des Waagbalkens ein Tauchkörper mit genau bekanntem Volumen. Am anderen Ende hängen Reiter an vorgegebenen Kerben. Zuerst bringt man die Waage in Luft ins Gleichgewicht. Taucht der Körper dann in die Flüssigkeit, bekommt er einen Auftrieb, der zur Dichte der Flüssigkeit proportional ist. Mit den Reitern gleicht man ihn aus und liest die Dichte an den Reiterstellungen ab. Vorher prüft man die Waage mit destilliertem Wasser, dessen Dichte man kennt.
+
+![Mohr-Westphalsche Waage: Der Tauchkörper hängt mit einem Zusatzgewicht am Waagbalken und taucht im Messzylinder in die Flüssigkeit, rechts sitzen die Skalen mit den Reitern.](/images/dichtebestimmung/mohr_westphal_waage.png)
 
 ## Warum die Dichte von Wasser zählt
 
