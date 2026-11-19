@@ -1,4 +1,4 @@
-module github.com/eskopp/Physik
+module github.com/eskopp/Studium
 
 go 1.27.4
 

@@ -37,7 +37,7 @@ menu:
         type: search
     - name: GitHub
       weight: 3
-      url: https://github.com/eskopp/Physik
+      url: https://github.com/eskopp/Studium
       params:
         icon: github
 
@@ -55,7 +55,7 @@ params:
   displayUpdatedDate: true
   editURL:
     enable: true
-    base: https://github.com/eskopp/Physik/edit/main/content
+    base: https://github.com/eskopp/Studium/edit/main/content
   search:
     enable: true
     type: flexsearch
